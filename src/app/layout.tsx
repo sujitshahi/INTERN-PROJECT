@@ -34,7 +34,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         
-        <Providers>
+        <Providers>    
           <Header />
          {children}
         </Providers>
