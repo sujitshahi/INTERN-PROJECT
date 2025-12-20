@@ -61,11 +61,11 @@ export default function HomePage() {
                 </div>
 
                 {/* 🌥️ CLOUDY BOTTOM EFFECT */}
-                {/* <div className="absolute bottom-0 left-0 w-full z-20">
+                <div className="absolute bottom-0 left-0 w-full z-20">
                   <svg
                     viewBox="0 0 1440 120"
                     preserveAspectRatio="none"
-                    className="w-full h-20 sm:h-25 md:h-30"
+                    className="w-full h-20 sm:h-25 md:h-30 transform rotate-180"
                   >
                     <path
                       fill="#F54A00"
@@ -81,7 +81,7 @@ export default function HomePage() {
                       "
                     />
                   </svg>
-                </div> */}
+                </div>
 
               </CardContent>
             </Card>

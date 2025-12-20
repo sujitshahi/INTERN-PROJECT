@@ -26,15 +26,26 @@ export default function App() {
       </NavbarBrand>
 
       
-      <NavbarContent className="hidden sm:flex gap-2 text-[15px]" justify="center">
-        {menuItems.map((item) => (
+      <NavbarContent className="hidden sm:flex gap-12 text-[15px]" justify="center">
+        <a href="#" className="text-orange-500 font-semibold">Home</a>
+        <a href="#about" className="hover:text-orange-500 font-semibold">About Us</a>
+        <a href="#classes" className="hover:text-orange-500 font-semibold">Classes</a>
+        <a href="#pages" className="hover:text-orange-500 font-semibold">Pages</a>
+        <a href="#contact" className="hover:text-orange-500 font-semibold">Contact Us</a>
+
+
+
+
+
+        
+        {/* {menuItems.map((item) => (
           <Button 
             key={item.label}
             className={item.isActive ? "text-orange-500" : "hover:text-orange-500"}
           >
             {item.label}
           </Button>
-        ))}
+        ))} */}
       </NavbarContent>
 
       <NavbarContent justify="end">
