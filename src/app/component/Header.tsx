@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <Navbar 
-      className="sticky h-20 flex jus p-5 pt-10 bg-[#FFFFFF]"
+      className="sticky h-20 flex justify-between p-5 pt-10 bg-[#FFFFFF]"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
