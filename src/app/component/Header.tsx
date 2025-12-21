@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <Navbar 
-      className="sticky h-20 flex justify-between p-5 pt-10 bg-[#FFFFFF]"
+      className="w-screen h-20 flex justify-between p-5 pt-10 z-50 bg-white shadow-md top-0"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
@@ -32,20 +32,6 @@ export default function App() {
         <a href="#classes" className="hover:text-orange-500 font-semibold">Classes</a>
         <a href="#pages" className="hover:text-orange-500 font-semibold">Pages</a>
         <a href="#contact" className="hover:text-orange-500 font-semibold">Contact Us</a>
-
-
-
-
-
-        
-        {/* {menuItems.map((item) => (
-          <Button 
-            key={item.label}
-            className={item.isActive ? "text-orange-500" : "hover:text-orange-500"}
-          >
-            {item.label}
-          </Button>
-        ))} */}
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -79,7 +65,7 @@ export default function App() {
             <Button 
               className={`w-full justify-start text-xl py-4 ${item.isActive ? "text-orange-500" : "text-gray-800"} hover:text-orange-500`}
               variant="light"
-              onClick={() => setIsMenuOpen(false)}
+              onPress={() => setIsMenuOpen(false)}
             >
               {item.label}
             </Button>
