@@ -90,4 +90,5 @@ export default function HomePage() {
       </CarouselContent>
     </Carousel>
   )
+  
 }
