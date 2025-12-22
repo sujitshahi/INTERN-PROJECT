@@ -9,7 +9,7 @@ import {
 
 export default function HomePage() {
   return (
-    <Carousel className="w-screen h-screen">
+    <Carousel className=" h-screen">
       <CarouselContent>
         <div className="absolute top-0 left-0 w-full z-20">
                   <svg

@@ -2,7 +2,7 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button } from "@heroui/react";
 
-export default function App() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <Navbar 
-      className="w-screen h-20 flex justify-between p-5 pt-10 z-50 bg-white shadow-md top-0"
+      className="sticky h-20 flex justify-between p-5 pt-10 z-50 bg-white shadow-md top-0"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
