@@ -1,8 +1,8 @@
 
 import Extra from "./component/Extra";
 import HomePage from "./component/HomePage";
-import Teacher from "./component/Teacher";
 import School_Facilities from "./school_facilities/page";
+// import Teacher from "./component/Teacher";
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
     <HomePage />
     <School_Facilities />
     <Extra />
-    <Teacher />
+    {/* <Teacher /> */}
     
       
     </div>
