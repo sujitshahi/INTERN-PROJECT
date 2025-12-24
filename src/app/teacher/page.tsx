@@ -11,7 +11,7 @@ export default function Page() {
 
         <div className="space-y-4 bg-[#FFF5F3] rounded-r-3xl max-lg:rounded-b-3xl max-lg:rounded-tr-none max-lg:w-full max-lg:max-w-md">
             <div className="flex flex-col h-full space-y-6 p-6 mt-20 max-lg:mt-6 max-lg:p-4 max-lg:space-y-4">
-                <h1 className="font-bold text-3xl max-lg:text-2xl max-sm:text-xl">Become A Teacher</h1>
+                <h1 className="font-bold text-3xl max-lg:text-2xl max-sm:text-xl font-[Montserrat SemiBold]">Become A Teacher</h1>
                 <p className="max-lg:text-sm">
                     Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
                 </p>

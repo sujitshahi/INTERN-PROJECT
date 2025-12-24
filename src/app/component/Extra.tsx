@@ -1,14 +1,14 @@
 'use client';
 import { Button } from "@heroui/react";
 
-export default function AboutSection() {
+export default function Extra() {
   return (
     <section className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
       
       
       <div className="lg:w-1/2 space-y-6">
-        <h1 className="text-4xl lg:text-5xl font-extrabold text-[#103741] leading-tight tracking-tight" 
-            style={{ fontFamily: 'var(--font-fredoka), cursive' }}>
+        <h1 className="text-3xl lg:text-5xl text-[#103741] leading-tight tracking-tight" 
+          >
           Learn More About Our Work And Our Cultural Activities
         </h1>
 
