@@ -34,7 +34,7 @@ export default function AboutSection() {
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100"
                 alt="Jhon Doe"
-                className="w-full h-full object-cover"
+                className="object-cover"
               />
             </div>
             <div>

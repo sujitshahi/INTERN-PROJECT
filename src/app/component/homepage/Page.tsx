@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export default function HomePage() {
+export default function Page() {
   return (
     <Carousel className=" h-screen">
       <CarouselContent>
