@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="mt-26 h-100 w-300 ml-10 flex max-lg:flex-col max-lg:items-center max-lg:w-full max-lg:ml-0 max-lg:mt-10 max-lg:px-4">
+    <div className="mt-26 h-100 w-300 ml-10 flex max-lg:flex-col max-lg:items-center max-lg:w-full max-lg:ml-0 max-lg:mt-10 max-lg:px-4 mb-4">
         <div className="h-100 w-300 max-w-full max-lg:w-full max-lg:h-auto max-lg:max-w-md">
             <img
                 className="w-full h-full object-cover rounded-l-3xl max-lg:rounded-t-3xl max-lg:rounded-bl-none"

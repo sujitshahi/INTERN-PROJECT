@@ -51,12 +51,7 @@ export default function Extra() {
       <div className="relative w-full max-w-125 h-80 sm:h-105 md:h-130 flex items-center justify-center mx-auto">
 
         
-        <div className="absolute 
-          w-48 h-48 
-          sm:w-56 sm:h-56 
-          md:w-80 md:h-80 
-          rounded-full border-8 md:border-12 border-[#FFF5F3] 
-          overflow-hidden z-10 hover:border-orange-500 duration-300">
+        <div className="absolute w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-10 hover:border-orange-500 duration-300">
           <img 
             src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=400" 
             alt="Children reading" 
@@ -65,15 +60,7 @@ export default function Extra() {
         </div>
 
       
-        <div className="absolute 
-          bottom-2 left-2 
-          sm:bottom-6 sm:left-6 
-          md:bottom-10 md:left-0 
-          w-32 h-32 
-          sm:w-40 sm:h-40 
-          md:w-56 md:h-56 
-          rounded-full border-8 md:border-12 border-[#FFF5F3] 
-          overflow-hidden z-20 hover:border-orange-500 duration-300">
+        <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 md:bottom-10 md:left-0  w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
           <img 
             src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&q=80&w=300" 
             alt="Child playing" 
@@ -82,15 +69,7 @@ export default function Extra() {
         </div>
 
        
-        <div className="absolute 
-          top-4 right-2 
-          sm:top-16 sm:right-6 
-          md:top-60 md:right-0 
-          w-32 h-32 
-          sm:w-40 sm:h-40 
-          md:w-56 md:h-56 
-          rounded-full border-8 md:border-12 border-[#FFF5F3] 
-          overflow-hidden z-20 hover:border-orange-500 duration-300">
+        <div className="absolute top-4 right-2 sm:top-16 sm:right-6 md:top-60 md:right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
           <img 
             src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=300" 
             alt="Child with camera" 
