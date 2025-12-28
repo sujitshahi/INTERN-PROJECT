@@ -1,3 +1,4 @@
+'use client'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -6,17 +7,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Button } from "@heroui/react";
 
 export default function Page() {
   const slides = [
     {
-      title: "Adventure Awaits",
-      description: "Explore the great outdoors with our new collection.",
+      title: "The Best KinderGarden School For Your Child",
+      description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://images.unsplash.com/flagged/photo-1551887373-6edba6dacbb1?auto=format&fit=crop&q=80&w=1920", 
     },
     {
-      title: "Urban Living",
-      description: "Discover the heartbeat of the city architecture.",
+      title: "Make A Brighter Future For Your Child",
+      description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://images.unsplash.com/photo-1623076189461-f7706b741c04?auto=format&fit=crop&q=80&w=1920", 
     },
   ];
@@ -44,23 +46,29 @@ export default function Page() {
               </div>
 
               <CardContent className="relative w-full h-full flex items-center justify-center p-4 md:p-6 z-30">
-                <div className="relative z-10 text-center w-full max-w-4xl mx-auto p-4 md:p-8">
+                <div className="relative max-w-2xl p-4 md:p-8 mr-140">
       
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+                  <h1 className=" sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
                     {slide.title}
                   </h1>
                   <p className="text-white text-sm sm:text-base md:text-lg mb-8 drop-shadow-md">
                     {slide.description}
                   </p>
-                  <button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold py-2 px-6 rounded-full transition-all">
+                
+                  <div className="space-x-4">
+                    <Button className="p-7 px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full">
                     Learn More
-                  </button>
+                  </Button>
+                  <Button className="p-7 px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-all">
+                    Our Classes
+                  </Button>
+                  </div>
                 </div>
 
-               
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-40">
-                  <CarouselPrevious className="cursor-pointer static h-10 w-10 bg-white/90 hover:bg-orange-500 translate-x-0 translate-y-0" />
-                  <CarouselNext className="cursor-pointer static h-10 w-10 bg-white/90 hover:bg-orange-500 translate-x-0 translate-y-0" />
+
+                <div className="absolute flex flex-col gap-4 ml-240">
+                  <CarouselPrevious className="cursor-pointer static h-12 w-12 bg-white/90 hover:bg-orange-500 translate-x-0 translate-y-0" />
+                  <CarouselNext className="cursor-pointer static h-12 w-12 bg-white/90 hover:bg-orange-500 translate-x-0 translate-y-0" />
                 </div>
 
                 <div className="absolute -bottom-6 left-0 w-full z-20 pointer-events-none">
@@ -76,7 +84,3 @@ export default function Page() {
     </Carousel>
   )
 }
-
-
-
-

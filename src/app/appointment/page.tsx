@@ -21,7 +21,7 @@ export default function Page() {
             </div>
            
             <textarea placeholder="Message" className="w-130 p-4 rounded-xl border-none bg-white outline-none placeholder-gray-400 text-gray-700 border border-transparent focus:ring-2 focus:ring-orange-300 focus:border-orange-300 duration-200"></textarea>                       
-            <button type="submit" className="w-full bg-[#FE5D37] text-white font-bold py-4 rounded-xl hover:bg-[#e45230] transition-colors duration-300 text-lg">
+            <button type="submit" className="w-full bg-[#FE5D37] text-white font-bold py-4 rounded-xl cursor-pointer hover:bg-[#e45230] transition-colors duration-300 text-lg">
               Submit
             </button>
           </form>

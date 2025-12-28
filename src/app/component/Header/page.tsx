@@ -15,7 +15,7 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 
-export default function Header() {
+export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const router = useRouter();
 
@@ -43,13 +43,14 @@ export default function Header() {
      
       <NavbarContent className="hidden sm:flex gap-9 text-[15px]" justify="center">
         <a href="/" className="text-orange-500 font-semibold">Home</a>
-        <a href="#about" className="hover:text-orange-500 font-semibold">About Us</a>
+        <a href="/aboutUs" className="hover:text-orange-500 font-semibold">About Us</a>
         <a href="/classes" className="hover:text-orange-500 font-semibold">Classes</a>
         
         <Dropdown>
           <DropdownTrigger>
-            <div className="hover:text-orange-500 font-semibold cursor-pointer flex items-center">
+            <div className="hover:text-orange-500 font-semibold cursor-pointer flex items-center gap-x-2">
               Pages
+              <i className="fa-solid fa-chevron-down"></i>
             </div>
           </DropdownTrigger>
           <DropdownMenu className="bg-white w-52 mt-3" aria-label="Pages Menu">
