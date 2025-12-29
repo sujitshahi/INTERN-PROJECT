@@ -61,13 +61,13 @@ export default function Footer() {
             </h1>
 
             <div>
-              <Button onClick={() => router.push('/aboutUs')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
+              <Button onPress={() => router.push('/aboutUs')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
                 <i className="fa-solid fa-chevron-right text-sm"></i>
                 About Us
               </Button>
 
-              <Button className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
-                <i className="fa-solid fa-chevron -right text-sm"></i>
+              <Button onPress={() => router.push('/contact')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
+                <i className="fa-solid fa-chevron-right text-sm"></i>
                 Contact Us
               </Button>
 
