@@ -1,5 +1,3 @@
-
-// import Extra from "./component/Extra";
 import School_Facilities from "./school_facilities/page";
 import Teacher from "./teacher/page";
 import Classes from "./classes/page";

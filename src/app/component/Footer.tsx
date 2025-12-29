@@ -1,7 +1,9 @@
 'use client'
 import { Button } from "@heroui/react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div className="w-full min-h-22.5 bg-[#103741] p-4 md:p-6 lg:p-8">
      
@@ -59,13 +61,13 @@ export default function Footer() {
             </h1>
 
             <div>
-              <Button className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
+              <Button onClick={() => router.push('/aboutUs')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
                 <i className="fa-solid fa-chevron-right text-sm"></i>
                 About Us
               </Button>
 
               <Button className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto">
-                <i className="fa-solid fa-chevron-right text-sm"></i>
+                <i className="fa-solid fa-chevron -right text-sm"></i>
                 Contact Us
               </Button>
 
