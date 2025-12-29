@@ -5,7 +5,7 @@ import Popular_Teachers from '../popular_teacher/page'
 export default function Page() {
   return (
     <div>
-        <Extra />
+      <Extra />
       <Teacher />
       <Popular_Teachers />
       

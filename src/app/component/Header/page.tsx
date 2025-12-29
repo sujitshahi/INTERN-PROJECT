@@ -37,7 +37,7 @@ export default function Page() {
       
       <NavbarBrand className="gap-3 text-orange-500 max-w-fit">
         <i className="fa-solid fa-book-open-reader fa-2x"></i>
-        <p className="font-bold text-3xl">Kider</p>
+        <h1 className="font-bold text-3xl">Kider</h1>
       </NavbarBrand>
 
      
@@ -53,7 +53,7 @@ export default function Page() {
               <i className="fa-solid fa-chevron-down"></i>
             </div>
           </DropdownTrigger>
-          <DropdownMenu className="bg-white w-52 mt-3" aria-label="Pages Menu">
+          <DropdownMenu className="p-3 bg-white w-52 mt-3" aria-label="Pages Menu">
             <DropdownItem onClick={() => router.push('/school_facilities')} className="hover:bg-orange-500" key="facilities">School Facilities</DropdownItem>
             <DropdownItem onClick={() => router.push('/popular_teacher')} className="hover:bg-orange-500" key="popular">Popular Teachers</DropdownItem>
             <DropdownItem onClick={() => router.push('/teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
