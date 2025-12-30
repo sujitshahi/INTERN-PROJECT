@@ -1,9 +1,10 @@
 import School_Facilities from "./school_facilities/page";
+import Extra from "./component/Extra";
 import Teacher from "./teacher/page";
 import Classes from "./classes/page";
 import Appointment from "./appointment/page";
 import Popular_Teachers from "./popular_teacher/page";
-import Extra from "./component/Extra";
+import Testimonial from "./testimonial/page";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
     <Classes />
     <Appointment />
     <Popular_Teachers />
+    <Testimonial />
     </div>
   )
 }

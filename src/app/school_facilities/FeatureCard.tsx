@@ -1,19 +1,19 @@
 'use client'
-import { motion } from "framer-motion"; // Add this
+import { motion } from "framer-motion";
 
 export default function FeatureCard() {
-  // Logic for staggered entrance
+ 
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 } // This makes them appear one by one
+      transition: { staggerChildren: 0.5 }
     }
   };
 
   const item = {
     hidden: { y: 50, opacity: 0 },
-    show: { y: 0, opacity: 1, transition: { duration: 0.6 } }
+    show: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
   return (

@@ -37,7 +37,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        
         <Providers>
           <ScrollToTop />
         <Header />
@@ -45,6 +44,7 @@ export default function RootLayout({
         {children}
         </Providers>
         <Footer />
+       
       </body>
     </html>
   );

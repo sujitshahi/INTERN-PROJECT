@@ -5,7 +5,7 @@ import FeatureCard from "./FeatureCard";
 export default function Page() {
   return (
     <div className="mt-10 p-8 flex flex-col items-center justify-center">
-      {/* Title animation */}
+     
       <motion.h1 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -16,11 +16,10 @@ export default function Page() {
         School Facilities
       </motion.h1>
 
-      {/* Paragraph animation */}
       <motion.p 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true }}
         className="text-2xl"
       >

@@ -58,7 +58,7 @@ export default function Page() {
             <DropdownItem onClick={() => router.push('/popular_teacher')} className="hover:bg-orange-500" key="popular">Popular Teachers</DropdownItem>
             <DropdownItem onClick={() => router.push('/teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
             <DropdownItem onClick={() => router.push('/appointment')} className="hover:bg-orange-500" key="appointment">Make Appointment</DropdownItem>
-            <DropdownItem className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
+            <DropdownItem onClick={() => router.push('/testimonial')} className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
             <DropdownItem className="hover:bg-orange-500" key="error">404 Error</DropdownItem>
           </DropdownMenu>
         </Dropdown>

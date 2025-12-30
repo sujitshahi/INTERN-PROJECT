@@ -1,132 +1,27 @@
-// 'use client';
-// import { Button } from "@heroui/react";
-
-// export default function Extra() {
-//   return (
-//     <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
-      
-      
-//       <div className="lg:w-1/2 space-y-6">
-//         <h1 className="text-3xl lg:text-5xl text-[#103741] leading-tight tracking-tight" 
-//           >
-//           Learn More About Our Work And Our Cultural Activities
-//         </h1>
-
-//         <p className="text-gray-600 text-lg leading-relaxed">
-//           Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-//           amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
-//           clita duo justo magna dolore erat amet
-//         </p>
-
-//         <p className="text-gray-600 text-lg leading-relaxed">
-//           Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet
-//           est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy
-//           clita sit at.
-//         </p>
-
-//         <div className="flex flex-wrap items-center gap-8 pt-4">
-//           <Button className="bg-[#FE5D37] text-white px-10 py-7 rounded-full text-lg font-bold shadow-lg hover:bg-[#e44d2b] transition-colors">
-//             Read More
-//           </Button>
-
-//           <div className="flex items-center gap-4">
-//             <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-gray-100">
-//               <img
-//                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100"
-//                 alt="Jhon Doe"
-//                 className="object-cover"
-//               />
-//             </div>
-//             <div>
-//               <p className="text-[#FE5D37] font-bold text-xl leading-none">Jhon Doe</p>
-//               <p className="text-gray-500 text-sm">CEO & Founder</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-
-
-
-//       <div className="relative w-full max-w-125 h-80 sm:h-105 md:h-130 flex items-center justify-center mx-auto">
-
-        
-//         <div className="absolute w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-10 hover:border-orange-500 duration-300">
-//           <img 
-//             src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=400" 
-//             alt="Children reading" 
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-
-      
-//         <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 md:bottom-10 md:left-0  w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
-//           <img 
-//             src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&q=80&w=300" 
-//             alt="Child playing" 
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-
-       
-//         <div className="absolute top-4 right-2 sm:top-16 sm:right-6 md:top-60 md:right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
-//           <img 
-//             src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=300" 
-//             alt="Child with camera" 
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-
-//       </div>
-
-
-   
-
-//     </div>
-//   );
-// }
-
-
-
-
-
 'use client';
-import { motion } from "framer-motion"; // Added import
 import { Button } from "@heroui/react";
+import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { useRef } from "react";
 
 export default function Extra() {
-  // Animation logic: Starts invisible and 50px down, slides up when seen
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3, // Delay between text block and image block
-        delayChildren: 0.2
-      }
-    }
-  };
+  const router = useRouter();
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
 
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
-  };
+  const leftInView = useInView(leftRef, { once: true, margin: "-100px" });
+  const rightInView = useInView(rightRef, { once: true, margin: "-100px" });
 
   return (
-    <motion.div 
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen"
-    >
-      
-      {/* Block 1: Text Content */}
-      <motion.div className="lg:w-1/2 space-y-6">
+    <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
+    
+      <motion.div
+        ref={leftRef}
+        className="lg:w-1/2 space-y-6"
+        initial={{ opacity: 0, y: 80 }}
+        animate={leftInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+      >
         <h1 className="text-3xl lg:text-5xl text-[#103741] leading-tight tracking-tight">
           Learn More About Our Work And Our Cultural Activities
         </h1>
@@ -144,7 +39,7 @@ export default function Extra() {
         </p>
 
         <div className="flex flex-wrap items-center gap-8 pt-4">
-          <Button className="bg-[#FE5D37] text-white px-10 py-7 rounded-full text-lg font-bold shadow-lg hover:bg-[#e44d2b] transition-colors">
+          <Button onPress={() => router.push("/")} className="bg-[#FE5D37] text-white px-10 py-7 rounded-full text-lg font-bold shadow-lg hover:bg-[#e44d2b] transition-colors">
             Read More
           </Button>
 
@@ -164,9 +59,14 @@ export default function Extra() {
         </div>
       </motion.div>
 
-      {/* Block 2: Image Gallery */}
-      <motion.div className="relative w-full max-w-125 h-80 sm:h-105 md:h-130 flex items-center justify-center mx-auto">
-        
+ 
+      <motion.div
+        ref={rightRef}
+        className="relative w-full max-w-125 h-80 sm:h-105 md:h-130 flex items-center justify-center mx-auto"
+        initial={{ opacity: 0, y: 80 }}
+        animate={rightInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+      >
         <div className="absolute w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-10 hover:border-orange-500 duration-300">
           <img 
             src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=400" 
@@ -175,7 +75,7 @@ export default function Extra() {
           />
         </div>
 
-        <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 md:bottom-10 md:left-0  w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
+        <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 md:bottom-10 md:left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 duration-300">
           <img 
             src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&q=80&w=300" 
             alt="Child playing" 
@@ -190,9 +90,9 @@ export default function Extra() {
             className="w-full h-full object-cover"
           />
         </div>
-
       </motion.div>
 
-    </motion.div>
+    </div>
   );
 }
+
