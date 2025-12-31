@@ -63,7 +63,7 @@ export default function Page() {
           </DropdownMenu>
         </Dropdown>
         
-        <a href="#contact" className="hover:text-orange-500 font-semibold">Contact Us</a>
+        <a href="/contact" className="hover:text-orange-500 font-semibold">Contact Us</a>
       </NavbarContent>
 
 

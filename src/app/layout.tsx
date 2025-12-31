@@ -38,7 +38,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Providers>
-          <ScrollToTop />
+        <ScrollToTop />
         <Header />
         <Homepage />
         {children}

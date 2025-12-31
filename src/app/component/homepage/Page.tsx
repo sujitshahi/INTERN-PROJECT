@@ -41,8 +41,7 @@ export default function Page() {
                 />
                 <div className="absolute inset-0 bg-black/20" />
               </div>
-
-              {/* Top SVG Wave */}
+              
               <div className="absolute top-0 left-0 w-full z-20 pointer-events-none">
                 <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-20 sm:h-24 md:h-32 block">
                   <path fill="#F54A00" d="M0,0 L1440,0 L1440,80 C1320,70 1200,110 1080,100 C960,90 840,50 720,60 C600,70 480,90 360,80 C240,70 120,70 0,90 Z" />

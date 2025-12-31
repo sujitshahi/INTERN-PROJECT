@@ -1,5 +1,4 @@
 'use client';
-import { Quote, ArrowLeft, ArrowRight, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion"; 
 import {
   Carousel,
@@ -22,7 +21,7 @@ export default function Page() {
       initial={{ opacity: 0, y: 50 }} 
       whileInView={{ opacity: 1, y: 0 }} 
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 2, ease: "easeOut" }}
       className="relative w-full max-w-6xl mx-auto py-16 px-12"
     >
    
@@ -67,18 +66,18 @@ export default function Page() {
                       <p className="text-sm text-gray-400">{item.profession}</p>
                     </div>
                   </div>
-                  <Quote 
-                    className="text-[#FF6B3D] w-12 h-12 rotate-180 opacity-90" 
-                    fill="currentColor" 
-                  />
+                  <div>
+                    <i className="fa-solid fa-quote-right fa-2xl text-orange-500"></i>
+                  </div>
+              
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="absolute -left-12 h-12 w-12 cursor-pointer bg-[#FF6B3D] text-white hover:bg-[#e85a2e] hover:text-white border-none hidden md:flex" />
-        <CarouselNext className="absolute -right-12 h-12 w-12 cursor-pointer bg-[#FF6B3D] text-white hover:bg-[#e85a2e] hover:text-white border-none hidden md:flex" />
+        <CarouselPrevious className="absolute -left-15 h-12 w-12 cursor-pointer bg-[#FF6B3D] text-white hover:bg-[#e85a2e] hover:text-white border-none hidden md:flex" />
+        <CarouselNext className="absolute -right-15 h-12 w-12 cursor-pointer bg-[#FF6B3D] text-white hover:bg-[#e85a2e] hover:text-white border-none hidden md:flex" />
       </Carousel>
     </motion.section>
   );
