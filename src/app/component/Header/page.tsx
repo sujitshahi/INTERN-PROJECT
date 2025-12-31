@@ -85,7 +85,7 @@ export default function Page() {
         </div>
       </NavbarContent>
 
-      <NavbarMenu className="pt-10 bg-white">
+      <NavbarMenu className="pt-10 bg-black">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.label}>
             <Button 
