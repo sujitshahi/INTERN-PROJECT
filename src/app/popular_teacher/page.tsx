@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Page() {
   return (
+
     <div className="min-h-screen bg-white py-20 px-4 mt-20">
     
       
@@ -111,5 +112,6 @@ export default function Page() {
         </div>
 
     </div>
+
   );
 }

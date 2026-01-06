@@ -1,3 +1,4 @@
+import HomePage from "./component/Homepage/page";
 import School_Facilities from "./school_facilities/page";
 import Extra from "./component/Extra";
 import Teacher from "./teacher/page";
@@ -9,6 +10,7 @@ import Testimonial from "./testimonial/page";
 export default function Page() {
   return (
     <div>
+    <HomePage />
     <School_Facilities />
     <Extra />
     <Teacher />

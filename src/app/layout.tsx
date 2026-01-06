@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "./component/Footer";
-import Homepage from "./component/Homepage/page";
 import Header from "./component/Header/page";
 import ScrollToTop from "./component/ScrollToTop";
 
@@ -40,7 +39,6 @@ export default function RootLayout({
         <Providers>
         <ScrollToTop />
         <Header />
-        <Homepage />
         {children}
         </Providers>
         <Footer />
