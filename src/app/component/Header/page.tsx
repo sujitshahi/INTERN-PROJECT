@@ -259,7 +259,7 @@ export default function Header() {
 
         <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px]" justify="center">
           <a href="/" className="text-orange-500 font-semibold hover:underline">Home</a>
-          <a href="/aboutUs" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</a>
+          <a href="/about_us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</a>
           <a href="/classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</a>
           
           <Dropdown>

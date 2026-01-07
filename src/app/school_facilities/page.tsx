@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "framer-motion"; // Add this
+import { motion } from "framer-motion";
 import FeatureCard from "./FeatureCard";
 
 export default function Page() {
