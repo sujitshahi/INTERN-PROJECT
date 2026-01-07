@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
 
