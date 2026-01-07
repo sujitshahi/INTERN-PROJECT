@@ -279,12 +279,14 @@ export default function Header() {
             </DropdownMenu>
           </Dropdown>
           
-          <a href="/contact" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</a>
+          <a href="/contact_us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</a>
         </NavbarContent>
 
         <NavbarContent justify="end" className="max-w-fit">
           <div className="hidden sm:flex">
-            <button className="bg-orange-500 text-white font-bold py-2 px-4 lg:px-6 rounded-full flex items-center gap-2 lg:gap-3 hover:bg-orange-600 transition-colors cursor-pointer text-sm lg:text-base">
+            <button
+              onClick={() => router.push('/')}
+             className="bg-orange-500 text-white font-bold py-2 px-4 lg:px-6 rounded-full flex items-center gap-2 lg:gap-3 hover:bg-orange-600 transition-colors cursor-pointer text-sm lg:text-base">
               Join Us
               <i className="fa-solid fa-arrow-right-long"></i>
             </button>
