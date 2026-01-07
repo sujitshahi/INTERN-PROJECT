@@ -264,7 +264,7 @@ export default function Header() {
           
           <Dropdown>
             <DropdownTrigger>
-              <div className="text-gray-800 font-semibold hover:text-orange-500 cursor-pointer flex items-center gap-x-1 lg:gap-x-2">
+              <div className="text-gray-800 font-semibold hover:text-orange-500 hover:underline cursor-pointer flex items-center gap-x-1 lg:gap-x-2">
                 Pages
                 <i className="fa-solid fa-chevron-down text-xs"></i>
               </div>
