@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import FeatureCard from "./FeatureCard";
 
+
 export default function Page() {
   return (
     <div className="mt-10 p-8 flex flex-col items-center justify-center">
@@ -26,6 +27,7 @@ export default function Page() {
         Explore our school's facilities and amenities.
       </motion.p>
 
+    
       <FeatureCard />
     </div>
   )
