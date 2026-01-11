@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react"; // Added useState and useEffect
+import React, { useState, useEffect } from "react"; 
 import { 
   Dropdown, 
   DropdownTrigger, 
@@ -14,16 +14,15 @@ import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false); // New state to track if we are on the client
+  const [mounted, setMounted] = useState(false); 
   const router = useRouter();
 
-  // This runs only once after the component is mounted in the browser
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // If we are still rendering on the server, return a placeholder 
-  // with the same height to prevent layout shift.
+ 
   if (!mounted) {
     return <div className="h-20 bg-white w-full shadow-md" />; 
   }
@@ -61,7 +60,7 @@ export default function Header() {
               <DropdownItem onClick={() => router.push('/teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
               <DropdownItem onClick={() => router.push('/appointment')} className="hover:bg-orange-500" key="appointment">Make Appointment</DropdownItem>         
               <DropdownItem onClick={() => router.push('/testimonial')} className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
-              <DropdownItem className="hover:bg-orange-500" key="error">404 Error</DropdownItem>
+              <DropdownItem onClick={() => router.push('/not_found')} className="hover:bg-orange-500" key="error">404 Error</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           
@@ -89,7 +88,7 @@ export default function Header() {
 
       </Navbar>
 
-      {/* Mobile Menu logic remains the same */}
+     
       {isMenuOpen && (
         <div className="fixed inset-0 top-20 bg-white z-40 sm:hidden overflow-y-auto">
           <div className="flex flex-col py-4 px-6">

@@ -3,8 +3,6 @@ import { usePathname } from "next/navigation";
 
 export default function PageHeader({ title }: { title: string }) {
   const pathname = usePathname();
-
-  // Do not show on landing page
   if (pathname === "/") return null;
 
   const currentPage =
@@ -13,7 +11,6 @@ export default function PageHeader({ title }: { title: string }) {
   return (
     <div className="relative w-full h-80 flex flex-col justify-center px-6 sm:px-20 overflow-hidden">
 
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -22,10 +19,9 @@ export default function PageHeader({ title }: { title: string }) {
         }}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* TOP SVG */}
+    
       <svg
         className="absolute top-0 left-0 w-full"
         viewBox="0 0 1440 60"
@@ -37,7 +33,7 @@ export default function PageHeader({ title }: { title: string }) {
         />
       </svg>
 
-      {/* BOTTOM SVG */}
+   
       <svg
         className="absolute bottom-0 left-0 w-full"
         viewBox="0 0 1440 60"
@@ -49,7 +45,7 @@ export default function PageHeader({ title }: { title: string }) {
         />
       </svg>
 
-      {/* Content */}
+   
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <h1 className="text-white text-6xl md:text-7xl font-bold mb-4 font-serif italic uppercase">
           {currentPage}
