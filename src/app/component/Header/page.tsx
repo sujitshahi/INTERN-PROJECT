@@ -45,7 +45,7 @@ export default function Header() {
         <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px]" justify="center">
           <a href="/" className="text-orange-500 font-semibold hover:underline">Home</a>
           <a href="/about_us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</a>
-          <a href="/classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</a>
+          <a href="/Classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</a>
           
           <Dropdown>
             <DropdownTrigger>
@@ -54,13 +54,13 @@ export default function Header() {
                 <i className="fa-solid fa-chevron-down text-xs"></i>
               </div>
             </DropdownTrigger>
-            <DropdownMenu className="p-3 bg-white w-48 lg:w-52 mt-3 shadow-lg" aria-label="Pages Menu">
-              <DropdownItem onClick={() => router.push('/School_Facilities')} className="hover:bg-orange-500" key="facilities">School Facilities</DropdownItem>
-              <DropdownItem onClick={() => router.push('/Popular_Teacher')} className="hover:bg-orange-500" key="popular">Popular Teachers</DropdownItem>
-              <DropdownItem onClick={() => router.push('/Teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
-              <DropdownItem onClick={() => router.push('/Appointment')} className="hover:bg-orange-500" key="appointment">Make Appointment</DropdownItem>         
-              <DropdownItem onClick={() => router.push('/Testimonial')} className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
-              <DropdownItem onClick={() => router.push('/not_found')} className="hover:bg-orange-500" key="error">404 Error</DropdownItem>
+            <DropdownMenu className=" bg-white lg:w-52 mt-3 shadow-lg ">
+              <DropdownItem onClick={() => router.push('/School_Facilities')} className="hover:bg-gray-300" key="facilities">School Facilities</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Popular_Teacher')} className="hover:bg-gray-300" key="popular">Popular Teachers</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Teacher')} className="hover:bg-gray-300" key="teacher">Become A Teacher</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Appointment')} className="hover:bg-gray-300" key="appointment">Make Appointment</DropdownItem>         
+              <DropdownItem onClick={() => router.push('/Testimonial')} className="hover:bg-gray-300" key="testimonail">Testimonial</DropdownItem>
+              <DropdownItem onClick={() => router.push('/not_found')} className="hover:bg-gray-300" key="error">404 Error</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           

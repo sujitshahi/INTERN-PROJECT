@@ -103,12 +103,10 @@ export default function Page() {
               rows={5}
               className="w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none resize-none bg-white"
             ></textarea>
-            <button
-              type="submit"
-              className="w-full py-4 bg-[#FF5733] text-white font-semibold rounded-md hover:bg-[#e64a2e] transition-colors"
-            >
-              Send Message
-            </button>
+       
+            <Button
+             className="w-full py-4 bg-[#FF5733] text-white font-semibold rounded-md hover:bg-[#e64a2e] transition-colors"
+             >Send Message</Button>
           </form>
         </div>
 
