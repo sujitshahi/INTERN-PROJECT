@@ -6,7 +6,7 @@ import Footer from "./component/Footer";
 import Header from "./component/Header/page";
 import ScrollToTop from "./component/ScrollToTop";
 import PageHeader from "./component/PageHeader";
-// import PageHeader from "./component/PageHeader";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,11 +38,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
       >
+        
         <Providers>
-        <ScrollToTop />
-        <Header />
-        <PageHeader title="Kider - Pre School Website" />
-        {children}
+          {/* 2. Wrap components that might use useSearchParams in Suspense */}
+          <Suspense fallback={<div>Loading...</div>}>
+            <ScrollToTop />
+            <Header />
+            <PageHeader title="Kider - Pre School Website" />
+            {children}
+          </Suspense>
         </Providers>
         <Footer />
        
