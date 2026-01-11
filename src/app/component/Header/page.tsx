@@ -55,11 +55,11 @@ export default function Header() {
               </div>
             </DropdownTrigger>
             <DropdownMenu className="p-3 bg-white w-48 lg:w-52 mt-3 shadow-lg" aria-label="Pages Menu">
-              <DropdownItem onClick={() => router.push('/school_facilities')} className="hover:bg-orange-500" key="facilities">School Facilities</DropdownItem>
-              <DropdownItem onClick={() => router.push('/popular_teacher')} className="hover:bg-orange-500" key="popular">Popular Teachers</DropdownItem>
-              <DropdownItem onClick={() => router.push('/teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
-              <DropdownItem onClick={() => router.push('/appointment')} className="hover:bg-orange-500" key="appointment">Make Appointment</DropdownItem>         
-              <DropdownItem onClick={() => router.push('/testimonial')} className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
+              <DropdownItem onClick={() => router.push('/School_Facilities')} className="hover:bg-orange-500" key="facilities">School Facilities</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Popular_Teacher')} className="hover:bg-orange-500" key="popular">Popular Teachers</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Teacher')} className="hover:bg-orange-500" key="teacher">Become A Teacher</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Appointment')} className="hover:bg-orange-500" key="appointment">Make Appointment</DropdownItem>         
+              <DropdownItem onClick={() => router.push('/Testimonial')} className="hover:bg-orange-500" key="testimonail">Testimonial</DropdownItem>
               <DropdownItem onClick={() => router.push('/not_found')} className="hover:bg-orange-500" key="error">404 Error</DropdownItem>
             </DropdownMenu>
           </Dropdown>
