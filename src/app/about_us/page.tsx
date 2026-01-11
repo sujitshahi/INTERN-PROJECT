@@ -1,7 +1,7 @@
 
 import Extra from '../component/extra'
-import Teacher from '../Teacher/page'
-import Popular_Teachers from '../Popular_Teacher/page'
+import Teacher from '../teacher/page'
+import Popular_Teachers from '../popular_teacher/page'
 export default function Page() {
   return (
     <div>
