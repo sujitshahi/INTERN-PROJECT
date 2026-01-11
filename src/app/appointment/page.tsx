@@ -45,7 +45,7 @@ export default function Page() {
         >
           <img
             src="https://themewagon.github.io/kider/img/appointment.jpg"
-            alt=""
+            alt="kid smilling"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </motion.div>
