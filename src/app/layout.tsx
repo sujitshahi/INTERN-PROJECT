@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "./component/Footer";
-import Header from "./component/header/page";
+import Header from "./component/Header/page";
 import ScrollToTop from "./component/ScrollToTop";
 import PageHeader from "./component/PageHeader";
 import { Suspense } from "react";
