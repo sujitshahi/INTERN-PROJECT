@@ -97,10 +97,10 @@ export default function Header() {
               <Link href="/" className="font-semibold py-3 text-orange-500 hover:text-orange-600" onClick={() => setIsMenuOpen(false)}>Home</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/aboutUs" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+              <Link href="/About_Us" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</Link>
+              <Link href="/Classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
               <div className="flex flex-col">
@@ -115,7 +115,7 @@ export default function Header() {
               </div>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/contact" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+              <Link href="/Contact_Us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
             <div className="mt-8 pt-4">
               <button className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">
