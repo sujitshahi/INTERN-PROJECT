@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
@@ -129,7 +130,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      
+        <div>
+          
+        </div>
+
+       
 
       </div>
     </div>

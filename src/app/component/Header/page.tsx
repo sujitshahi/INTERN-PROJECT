@@ -11,6 +11,7 @@ import {
   NavbarMenuToggle,  
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,9 +44,9 @@ export default function Header() {
         </NavbarBrand>
 
         <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px]" justify="center">
-          <a href="/" className="text-orange-500 font-semibold hover:underline">Home</a>
-          <a href="/About_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</a>
-          <a href="/Classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</a>
+          <Link href="/" className="text-orange-500 font-semibold hover:underline">Home</Link>
+          <Link href="/About_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</Link>
+          <Link href="/Classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</Link>
           
           <Dropdown>
             <DropdownTrigger>
@@ -64,7 +65,7 @@ export default function Header() {
             </DropdownMenu>
           </Dropdown>
           
-          <a href="/Contact_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</a>
+          <Link href="/Contact_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
         </NavbarContent>
 
         <NavbarContent justify="end" className="max-w-fit">
@@ -93,13 +94,13 @@ export default function Header() {
         <div className="fixed inset-0 top-20 bg-white z-40 sm:hidden overflow-y-auto">
           <div className="flex flex-col py-4 px-6">
             <div className="border-b border-gray-100 py-4">
-              <a href="/" className="font-semibold py-3 text-orange-500 hover:text-orange-600" onClick={() => setIsMenuOpen(false)}>Home</a>
+              <Link href="/" className="font-semibold py-3 text-orange-500 hover:text-orange-600" onClick={() => setIsMenuOpen(false)}>Home</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <a href="/aboutUs" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</a>
+              <Link href="/aboutUs" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <a href="/classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</a>
+              <Link href="/classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
               <div className="flex flex-col">
@@ -114,7 +115,7 @@ export default function Header() {
               </div>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <a href="/contact" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+              <Link href="/contact" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
             <div className="mt-8 pt-4">
               <button className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">
