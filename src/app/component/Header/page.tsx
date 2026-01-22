@@ -107,7 +107,7 @@ export default function Header() {
                 <div className="text-xl font-semibold py-3 text-gray-800">Pages</div>
                 <div className="pl-4 border-l-2 border-gray-200 ml-2">
                   <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500" onClick={() => { router.push('/School_Facilities'); setIsMenuOpen(false); }}>School Facilities</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Popular_Teachers'); setIsMenuOpen(false); }}>Popular Teachers</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Popular_Teacher'); setIsMenuOpen(false); }}>Popular Teachers</button>
                   <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Teacher'); setIsMenuOpen(false); }}>Become A Teacher</button>
                   <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Appointment'); setIsMenuOpen(false); }}>Make Appointment</button>
                   <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Testimonial'); setIsMenuOpen(false); }}>Testimonial</button>
