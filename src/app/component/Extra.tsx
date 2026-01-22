@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
-export default function extra() {
+export default function Extra() {
   const router = useRouter();
   const leftRef = useRef(null);
   const rightRef = useRef(null);

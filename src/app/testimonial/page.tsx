@@ -14,7 +14,7 @@ const testimonials = [
   { id: 3, name: "Client Name", profession: "Profession" },
 ];
 
-export default function Page() {
+export default function page() {
   return (
    
     <motion.section 

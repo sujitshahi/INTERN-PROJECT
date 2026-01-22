@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion"; 
 
-export default function NotFound() {
+export default function page() {
   const router = useRouter();
 
   return (
