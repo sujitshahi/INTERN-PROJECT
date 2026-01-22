@@ -7,7 +7,8 @@ import Popular_Teachers from "./Popular_Teacher/page";
 import Testimonial from "./Testimonial/page";
 import Extra from "./component/Extra";
 // import classes from "./Classes/page";
-import Classes from "./classes/page";
+// import Classes from "./classes/page";
+import Classes from "./Classes/page";
 
 export default function Page() {
   return (
@@ -20,7 +21,8 @@ export default function Page() {
     <Appointment />
     <Popular_Teachers />
     <Testimonial />
-    <Classes /> 
+    {/* <Classes />  */}
+    <Classes />
     </div>
   )
 }
