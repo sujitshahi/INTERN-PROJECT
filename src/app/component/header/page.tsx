@@ -18,6 +18,8 @@ export default function Header() {
   const [mounted, setMounted] = useState(false); 
   const router = useRouter();
 
+  
+
 
   useEffect(() => {
     setMounted(true);
