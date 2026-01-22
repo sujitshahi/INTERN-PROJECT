@@ -13,7 +13,7 @@ export default function Page() {
     <HomePage />
     <School_Facilities />
     <Extra />
-    <Teacher />
+    <Teacher />  
     <Classes />
     <Appointment />
     <Popular_Teachers />
