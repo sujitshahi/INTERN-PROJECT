@@ -45,8 +45,8 @@ export default function Header() {
 
         <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px]" justify="center">
           <Link href="/" className="text-orange-500 font-semibold hover:underline">Home</Link>
-          <Link href="/about_us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</Link>
-          <Link href="/classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</Link>
+          <Link href="/About_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</Link>
+          <Link href="/Classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</Link>
           
           <Dropdown>
             <DropdownTrigger>
@@ -56,16 +56,16 @@ export default function Header() {
               </div>
             </DropdownTrigger>
             <DropdownMenu className=" bg-white lg:w-52 mt-3 shadow-lg ">
-              <DropdownItem onClick={() => router.push('/school_facilities')} className="hover:bg-gray-300" key="facilities">School Facilities</DropdownItem>
-              <DropdownItem onClick={() => router.push('/popular_teacher')} className="hover:bg-gray-300" key="popular">Popular Teachers</DropdownItem>
-              <DropdownItem onClick={() => router.push('/teacher')} className="hover:bg-gray-300" key="teacher">Become A Teacher</DropdownItem>
-              <DropdownItem onClick={() => router.push('/appointment')} className="hover:bg-gray-300" key="appointment">Make Appointment</DropdownItem>         
-              <DropdownItem onClick={() => router.push('/testimonial')} className="hover:bg-gray-300" key="testimonail">Testimonial</DropdownItem>
-              <DropdownItem onClick={() => router.push('/not_found')} className="hover:bg-gray-300" key="error">404 Error</DropdownItem>
+              <DropdownItem onClick={() => router.push('/School_Facilities')} className="hover:bg-gray-300" key="facilities">School Facilities</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Popular_Teacher')} className="hover:bg-gray-300" key="popular">Popular Teachers</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Teacher')} className="hover:bg-gray-300" key="teacher">Become A Teacher</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Appointment')} className="hover:bg-gray-300" key="appointment">Make Appointment</DropdownItem>         
+              <DropdownItem onClick={() => router.push('/Testimonial')} className="hover:bg-gray-300" key="testimonail">Testimonial</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Not_Found')} className="hover:bg-gray-300" key="error">404 Error</DropdownItem>
             </DropdownMenu>
           </Dropdown>
           
-          <Link href="/contact_us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
+          <Link href="/Contact_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
         </NavbarContent>
 
         <NavbarContent justify="end" className="max-w-fit">
@@ -97,25 +97,25 @@ export default function Header() {
               <Link href="/" className="font-semibold py-3 text-orange-500 hover:text-orange-600" onClick={() => setIsMenuOpen(false)}>Home</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/about_us" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+              <Link href="/About_Us" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>About Us</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</Link>
+              <Link href="/Classes" className="font-semibold py-3 text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Classes</Link>
             </div>
             <div className="border-b border-gray-100 py-4">
               <div className="flex flex-col">
                 <div className="text-xl font-semibold py-3 text-gray-800">Pages</div>
                 <div className="pl-4 border-l-2 border-gray-200 ml-2">
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500" onClick={() => { router.push('/school_facilities'); setIsMenuOpen(false); }}>School Facilities</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/popular_teacher'); setIsMenuOpen(false); }}>Popular Teachers</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/teacher'); setIsMenuOpen(false); }}>Become A Teacher</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/appointment'); setIsMenuOpen(false); }}>Make Appointment</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/testimonial'); setIsMenuOpen(false); }}>Testimonial</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500" onClick={() => { router.push('/School_Facilities'); setIsMenuOpen(false); }}>School Facilities</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Popular_Teachers'); setIsMenuOpen(false); }}>Popular Teachers</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Teacher'); setIsMenuOpen(false); }}>Become A Teacher</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Appointment'); setIsMenuOpen(false); }}>Make Appointment</button>
+                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Testimonial'); setIsMenuOpen(false); }}>Testimonial</button>
                 </div>
               </div>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/contact_us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+              <Link href="/Contact_Us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
             <div className="mt-8 pt-4">
               <button className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">
