@@ -49,11 +49,11 @@ export default function Footer() {
               Quick Links
             </h1>
             <div>
-              <Button onPress={() => router.push('/About_Us')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto bg-transparent">
+              <Button onPress={() => router.push('/about_us')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto bg-transparent">
                 <i className="fa-solid fa-chevron-right text-sm"></i>
                 About Us
               </Button>
-              <Button onPress={() => router.push('/Contact_Us')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto bg-transparent">
+              <Button onPress={() => router.push('/contact_us')} className="flex items-center gap-3 text-gray-400 p-0 justify-start hover:text-orange-500 transition-colors w-full md:w-auto bg-transparent">
                 <i className="fa-solid fa-chevron-right text-sm"></i>
                 Contact Us
               </Button>
