@@ -6,7 +6,6 @@ export default function page() {
   return (
     <div>
       <Extra />
-      <Extra />
       <Teacher />
       <Popular_Teachers />
       
