@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="relative w-full max-w-6xl mx-auto my-12 px-4">
       <div className="flex flex-col md:flex-row rounded-4xl overflow-hidden shadow-sm">

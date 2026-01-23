@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function Header() {
+export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false); 
   const router = useRouter();

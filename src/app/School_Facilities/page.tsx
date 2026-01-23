@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import FeatureCard from "./FeatureCard";
 
 
-export default function Page() {
+export default function page() {
   return (
     <div className="mt-10 p-8 flex flex-col items-center justify-center">
      

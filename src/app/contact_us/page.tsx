@@ -3,7 +3,7 @@
 import { Button } from "@heroui/react";
 import { motion } from "framer-motion";
 
-export default function page() {
+export default function Page() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

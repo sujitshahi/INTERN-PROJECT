@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="mt-26 h-100 w-300 ml-10 flex max-lg:flex-col max-lg:items-center max-lg:w-full max-lg:ml-0 max-lg:mt-10 max-lg:px-4 mb-4">
       
