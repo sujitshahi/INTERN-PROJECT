@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function Page() {
+export default function page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false); 
   const router = useRouter();

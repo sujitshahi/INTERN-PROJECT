@@ -57,7 +57,7 @@ function AnimatedCard({ children, delay = 0 }: AnimatedCardProps) {
   );
 }
 
-export default function Page() {
+export default function page() {
   return (
     <div className="min-h-screen p-10">
       
