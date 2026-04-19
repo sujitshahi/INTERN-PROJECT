@@ -11,7 +11,6 @@ interface AnimatedSectionProps {
 
 function AnimatedSection({ children, delay = 0 }: AnimatedSectionProps) {
   const ref = useRef(null);
-  // Changed margin to "0px" so it triggers immediately on load
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (
@@ -37,7 +36,6 @@ interface AnimatedCardProps {
 
 function AnimatedCard({ children, delay = 0 }: AnimatedCardProps) {
   const ref = useRef(null);
-  // Changed margin to "0px" so it triggers immediately on load
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (

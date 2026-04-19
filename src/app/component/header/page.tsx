@@ -15,17 +15,8 @@ import Link from "next/link";
 
 export default function page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false); 
   const router = useRouter();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
- 
-  if (!mounted) {
-    return <div className="h-20 bg-white w-full shadow-md" />; 
-  }
 
   return (
     <>
