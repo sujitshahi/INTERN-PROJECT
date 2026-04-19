@@ -46,7 +46,7 @@ export default function Extra() {
           <div className="flex items-center gap-4">
             <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-gray-100">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100"
+                src="/images/123.avif"
                 alt="Jhon Doe"
                 className="object-cover"
               />

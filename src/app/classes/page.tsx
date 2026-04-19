@@ -77,14 +77,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-1.jpg" alt="Art" className="w-full h-full object-cover" />
+                <img src="/images/classes-1.jpg" alt="Art" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Art & Drawing</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -106,14 +106,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-2.jpg" alt="Color" className="w-full h-full object-cover" />
+                <img src="/images/classes-2.jpg" alt="Color" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Color Management</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -135,14 +135,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-3.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <img src="/images/classes-3.jpg" alt="Dance" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Athletic & Dance</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -164,14 +164,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-4.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <img src="/images/classes-4.jpg" alt="Dance" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Language & Speaking</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -193,14 +193,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-5.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <img src="/images/classes-5.jpg" alt="Dance" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Religion & History</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -222,14 +222,14 @@ export default function page() {
           <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="https://themewagon.github.io/kider/img/classes-6.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <img src="/images/classes-6.jpg" alt="Dance" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">General Knowledge</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=100" className="w-10 h-10 rounded-full bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-full bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
