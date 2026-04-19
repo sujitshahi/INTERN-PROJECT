@@ -44,7 +44,7 @@ export default function page() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <img
-            src="https://themewagon.github.io/kider/img/appointment.jpg"
+            src="/images/appointment.jpg"
             alt="kid smilling"
             className="absolute inset-0 w-full h-full object-cover"
           />

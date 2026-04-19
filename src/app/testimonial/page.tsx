@@ -8,10 +8,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+
 const testimonials = [
-  { id: 1, name: "Client Name", profession: "Profession" },
-  { id: 2, name: "Client Name", profession: "Profession" },
-  { id: 3, name: "Client Name", profession: "Profession" },
+  { id: 1, name: "Client Name", profession: "Profession", image: "/images/150.jpg" },
+  { id: 2, name: "Client Name", profession: "Profession", image: "/images/150 (1).jpg" },
+  { id: 3, name: "Client Name", profession: "Profession", image: "/images/150 (2).jpg" },
 ];
 
 export default function page() {
@@ -54,7 +55,7 @@ export default function page() {
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-full overflow-hidden border-4 border-[#FFF5F3]">
                       <img
-                        src={`https://i.pravatar.cc/150?u=${index}`}
+                        src={item.image}
                         alt={item.name}
                         className="object-cover w-full h-full"
                       />

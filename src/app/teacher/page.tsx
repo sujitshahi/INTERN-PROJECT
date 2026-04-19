@@ -14,7 +14,7 @@ export default function page() {
       >
         <img
           className="w-full h-full object-cover rounded-l-3xl max-lg:rounded-t-3xl max-lg:rounded-bl-none"
-          src="https://themewagon.github.io/kider/img/call-to-action.jpg"
+          src="/images/call-to-action.jpg"
           alt=""
         />
       </motion.div>

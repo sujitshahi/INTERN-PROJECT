@@ -35,7 +35,7 @@ export default function page() {
               viewport={{ once: true, amount: 0.3 }}
             >
                 <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="https://themewagon.github.io/kider/img/team-1.jpg" alt="Teacher-1" className=" object-cover"/>                               
+                    <img src="/images/team-1.jpg" alt="Teacher-1" className=" object-cover"/>                               
                 </div>
 
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
@@ -64,7 +64,7 @@ export default function page() {
               viewport={{ once: true, amount: 0.4 }}
             >
                 <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="https://themewagon.github.io/kider/img/team-2.jpg" alt="Teacher-2" className=" object-cover" />
+                    <img src="/images/team-2.jpg" alt="Teacher-2" className=" object-cover" />
                 </div>
                 
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
@@ -91,7 +91,7 @@ export default function page() {
               viewport={{ once: true, amount: 0.5 }}
             >
                 <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="https://themewagon.github.io/kider/img/team-3.jpg" alt="Teacher 3" className=" object-cover" />                    
+                    <img src="/images/team-3.jpg" alt="Teacher 3" className=" object-cover" />                    
                 </div>
                
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
