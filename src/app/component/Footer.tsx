@@ -76,12 +76,12 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <h1 className="text-white text-2xl mb-4">Photo Gallery</h1>
             <div className="grid grid-cols-3 gap-2 max-w-50 md:max-w-none">
-              <img src="https://themewagon.github.io/kider/img/classes-1.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 1" />
-              <img src="https://themewagon.github.io/kider/img/classes-2.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 2" />
-              <img src="https://themewagon.github.io/kider/img/classes-3.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 3" />
-              <img src="https://themewagon.github.io/kider/img/classes-4.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 4" />
-              <img src="https://themewagon.github.io/kider/img/classes-5.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 5" />
-              <img src="https://themewagon.github.io/kider/img/classes-6.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 6" />
+              <img src="/images/classes-1.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 1" />
+              <img src="/images/classes-2.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 2" />
+              <img src="/images/classes-3.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 3" />
+              <img src="/images/classes-4.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 4" />
+              <img src="/images/classes-5.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 5" />
+              <img src="/images/classes-6.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 6" />
             </div>
           </div>
 
