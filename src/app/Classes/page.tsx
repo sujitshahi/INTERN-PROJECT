@@ -229,7 +229,7 @@ export default function page() {
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">General Knowledge</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-full bg-gray-300" />
+                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
