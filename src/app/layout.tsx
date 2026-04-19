@@ -40,7 +40,6 @@ export default function RootLayout({
       >
         
         <Providers>
-          {/* 2. Wrap components that might use useSearchParams in Suspense */}
           <Suspense fallback={<div>Loading...</div>}>
             <ScrollToTop />
             <Header />

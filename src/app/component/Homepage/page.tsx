@@ -17,12 +17,13 @@ export default function page() {
     {
       title: "The Best KinderGarden School For Your Child",
       description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "https://images.unsplash.com/flagged/photo-1551887373-6edba6dacbb1?auto=format&fit=crop&q=80&w=1920", 
+      image: "/images/photo.avif", 
     },
+ 
     {
       title: "Make A Brighter Future For Your Child",
       description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "https://images.unsplash.com/photo-1623076189461-f7706b741c04?auto=format&fit=crop&q=80&w=1920", 
+      image: "/images/kid.jpg", 
     },
   ];
 
