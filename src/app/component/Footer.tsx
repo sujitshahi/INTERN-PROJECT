@@ -99,7 +99,7 @@ export default function Footer() {
                   placeholder="Enter your email" 
                   className="flex-1 p-2 border-2 border-gray-300 rounded-md text-gray-500 w-full"
                 />
-                <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors whitespace-nowrap w-full sm:w-auto">
+                <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 cursor-pointer transition-colors whitespace-nowrap w-full sm:w-auto">
                   Signin
                 </button>
               </div>
