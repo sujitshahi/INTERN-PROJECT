@@ -10,7 +10,7 @@ export default function page() {
           className="flex-1 bg-[#FFF5F3] p-4"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className=" text-3xl font-bold mb-8">
