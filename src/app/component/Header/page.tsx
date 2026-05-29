@@ -47,7 +47,7 @@ export default function page() {
             </DropdownTrigger>
             <DropdownMenu className=" bg-white lg:w-52 mt-3 shadow-lg ">
               <DropdownItem onClick={() => router.push('/School_Facilities')} className="hover:bg-gray-300" key="facilities">School Facilities</DropdownItem>
-              <DropdownItem onClick={() => router.push('/Popular_Teachers')} className="hover:bg-gray-300" key="popular">Popular Teachers</DropdownItem>
+              <DropdownItem onClick={() => router.push('/Popular_Teacher')} className="hover:bg-gray-300" key="popular">Popular Teachers</DropdownItem>
               <DropdownItem onClick={() => router.push('/Teacher')} className="hover:bg-gray-300" key="teacher">Become A Teacher</DropdownItem>
               <DropdownItem onClick={() => router.push('/Appointment')} className="hover:bg-gray-300" key="appointment">Make Appointment</DropdownItem>         
               <DropdownItem onClick={() => router.push('/Testimonial')} className="hover:bg-gray-300" key="testimonail">Testimonial</DropdownItem>
