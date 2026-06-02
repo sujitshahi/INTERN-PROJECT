@@ -15,7 +15,7 @@ export default function page() {
         >
           <h2 className=" text-3xl font-bold mb-8">
             Make Appointment
-          </h2>
+          </h2> 
 
           <form className="space-y-4">
             
