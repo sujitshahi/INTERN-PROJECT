@@ -33,11 +33,7 @@ export default function page() {
         <p className="text-gray-500 leading-relaxed">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo. </p>
       </motion.div>
 
-      <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate.</p>
-      <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate.</p>
-      <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate. Voluptas, doloremque. Molestias, voluptate.</p>
-      <p>lorem ipsum dolor sit amet consectetur
-      </p>
+    
 
       <motion.div
         variants={containerVariants}
