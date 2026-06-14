@@ -57,14 +57,14 @@ function AnimatedCard({ children, delay = 0 }: AnimatedCardProps) {
 
 export default function page() {
   return (
-    <div className="min-h-screen p-10">
+    <div className="min-h-screen p-10 text-white">
       
       <AnimatedSection>
         <div className="max-w-2xl mx-auto text-center mt-25">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#1D4354] mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
             School Classes
           </h1>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="leading-relaxed">
             Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd
             vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
           </p>

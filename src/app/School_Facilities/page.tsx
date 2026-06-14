@@ -5,7 +5,7 @@ import FeatureCard from "./FeatureCard";
 
 export default function page() {
   return (
-    <div className="mt-10 p-8 flex flex-col items-center justify-center">
+    <div className="mt-10 p-8 flex flex-col items-center justify-center text-white">
      
       <motion.h1 
         initial={{ y: 50, opacity: 0 }}

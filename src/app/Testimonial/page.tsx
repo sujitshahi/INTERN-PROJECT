@@ -26,8 +26,8 @@ export default function page() {
       className="relative w-full max-w-6xl mx-auto py-16 px-12"
     >
    
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-serif font-bold text-[#2C4E56] mb-4">
+      <div className="text-center mb-12 text-white">
+        <h2 className="text-4xl font-serif font-bold mb-4">
           Our Clients Say!
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">

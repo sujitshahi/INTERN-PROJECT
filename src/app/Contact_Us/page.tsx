@@ -20,7 +20,7 @@ export default function page() {
   };
 
   return (
-    <section className="py-16 px-4 bg-white text-center">
+    <section className="py-16 px-4 text-center text-white">
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -29,8 +29,8 @@ export default function page() {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mx-auto mb-12"
       >
-        <h1 className="text-4xl font-bold text-[#1B3C35] mb-4">Get In Touch</h1>
-        <p className="text-gray-500 leading-relaxed">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo. </p>
+        <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
+        <p className="leading-relaxed">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo. </p>
       </motion.div>
 
     
@@ -46,21 +46,21 @@ export default function page() {
           <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-4">
             <i className="fa-solid fa-location-dot text-orange-500 fa-2xl flex items-center"></i>
           </div>
-          <p className="font-bold text-[#1B3C35]">123 Street, New York, USA</p>
+          <p className="font-bold">123 Street, New York, USA</p>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center">
           <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-4">
             <i className="fa-solid fa-envelope-open text-orange-500 fa-2xl flex items-center"></i>
           </div>
-          <p className="font-bold text-[#1B3C35]">info@example.com</p>
+          <p className="font-bold">info@example.com</p>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col items-center">
           <div className="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-4">
             <i className="fa-solid fa-phone text-orange-500 fa-2xl flex items-center"></i>
           </div>
-          <p className="font-bold text-[#1B3C35]">+012 345 6789</p>
+          <p className="font-bold">+012 345 6789</p>
         </motion.div>
       </motion.div>
 
@@ -72,7 +72,7 @@ export default function page() {
         className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-lg shadow-sm border border-gray-100"
       >
        
-        <div className="bg-[#FFF8F6] p-8 md:p-12 text-left">
+        <div className="bg-[#FFF8F6] p-8 md:p-12 text-left text-black">
           <p className="text-gray-600 mb-8 leading-relaxed">
             The contact form is currently inactive. Get a functional and working
             contact form with Ajax & PHP in a few minutes. Just copy and paste

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function page() {
   return (
 
-    <div className="min-h-screen bg-white py-20 px-4 mt-20">
+    <div className="min-h-screen py-20 px-4 mt-20 text-white">
     
       
         <motion.div
@@ -14,10 +14,10 @@ export default function page() {
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1D4354] mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Popular Teachers
             </h1>        
-            <p className="text-gray-500 leading-relaxed text-sm md:text-base">
+            <p className="leading-relaxed text-sm md:text-base">
               Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd
               vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
             </p>

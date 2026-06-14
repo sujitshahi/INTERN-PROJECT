@@ -13,7 +13,7 @@ export default function Extra() {
   const rightInView = useInView(rightRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
+    <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen text-white">
     
       <motion.div
         ref={leftRef}
@@ -22,17 +22,17 @@ export default function Extra() {
         animate={leftInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
       >
-        <h1 className="text-3xl lg:text-5xl text-[#103741] leading-tight tracking-tight">
+        <h1 className="text-3xl lg:text-5xl leading-tight tracking-tight">
           Learn More About Our Work And Our Cultural Activities
         </h1>
 
-        <p className="text-gray-600 text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed">
           Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
           amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
           clita duo justo magna dolore erat amet
         </p>
 
-        <p className="text-gray-600 text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed">
           Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet
           est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy
           clita sit at.

@@ -21,7 +21,7 @@ export default function page() {
   return (
     <>
       <Navbar 
-        className="sticky h-20 z-50 bg-white shadow-md px-4 sm:px-6"
+        className="sticky h-20 z-50 shadow-md px-4 sm:px-6"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         maxWidth="full"
@@ -33,14 +33,14 @@ export default function page() {
           <h1 className="font-bold text-2xl sm:text-3xl">Kider</h1>
         </NavbarBrand>
 
-        <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px]" justify="center">
+        <NavbarContent className="hidden sm:flex gap-6 lg:gap-9 text-sm lg:text-[15px] justify-center text-white">
           <Link href="/" className="text-orange-500 font-semibold hover:underline">Home</Link>
-          <Link href="/About_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">About Us</Link>
-          <Link href="/Classes" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Classes</Link>
+          <Link href="/About_Us" className=" font-semibold hover:text-orange-500 hover:underline">About Us</Link>
+          <Link href="/Classes" className="font-semibold hover:text-orange-500 hover:underline">Classes</Link>
           
           <Dropdown>
             <DropdownTrigger>
-              <div className="text-gray-800 font-semibold hover:text-orange-500 hover:underline cursor-pointer flex items-center gap-x-1 lg:gap-x-2">
+              <div className="font-semibold hover:text-orange-500 hover:underline cursor-pointer flex items-center gap-x-1 lg:gap-x-2">
                 Pages
                 <i className="fa-solid fa-chevron-down text-xs"></i>
               </div>
@@ -55,7 +55,7 @@ export default function page() {
             </DropdownMenu>
           </Dropdown>
           
-          <Link href="/Contact_Us" className="text-gray-800 font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
+          <Link href="/Contact_Us" className="font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
         </NavbarContent>
 
         <NavbarContent justify="end" className="max-w-fit">
