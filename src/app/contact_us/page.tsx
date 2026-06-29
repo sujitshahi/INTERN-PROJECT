@@ -1,9 +1,84 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@heroui/react";
 import { motion } from "framer-motion";
 
 export default function page() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    
+
+    if (errors[name as keyof typeof errors]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    let valid = true;
+    const newErrors = { name: "", email: "", subject: "", message: "" };
+
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      valid = false;
+    }
+
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      valid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+      valid = false;
+    }
+
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+      valid = false;
+    }
+
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message cannot be empty";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+
+    if (valid) {
+      
+      console.log("Form Submitted Successfully:", formData);
+      alert("Message Sent successfully!");
+      
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,32 +157,60 @@ export default function page() {
             </Button>
           </p>
 
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  className={`w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white ${errors.name ? "ring-2 ring-red-500" : ""}`}
+                />
+                {errors.name && <p className="text-red-500 text-xs mt-1 ml-1">{errors.name}</p>}
+              </div>
+              
+              <div>
+                <input
+                  type="text"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  className={`w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white ${errors.email ? "ring-2 ring-red-500" : ""}`}
+                />
+                {errors.email && <p className="text-red-500 text-xs mt-1 ml-1">{errors.email}</p>}
+              </div>
+            </div>
+
+            <div>
               <input
                 type="text"
-                placeholder="Your Name"
-                className="w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Subject"
+                className={`w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white ${errors.subject ? "ring-2 ring-red-500" : ""}`}
               />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white"
-              />
+              {errors.subject && <p className="text-red-500 text-xs mt-1 ml-1">{errors.subject}</p>}
             </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none bg-white"
-            />
-            <textarea
-              placeholder="Message"
-              rows={5}
-              className="w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none resize-none bg-white"
-            ></textarea>
+
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                rows={5}
+                className={`w-full p-4 rounded-md border-none focus:ring-2 focus:ring-orange-500 outline-none resize-none bg-white ${errors.message ? "ring-2 ring-red-500" : ""}`}
+              ></textarea>
+              {errors.message && <p className="text-red-500 text-xs mt-1 ml-1">{errors.message}</p>}
+            </div>
        
             <Button
-             className="w-full py-4 bg-[#FF5733] text-white font-semibold rounded-md hover:bg-[#e64a2e] transition-colors"
+              type="submit"
+              className="w-full py-4 bg-[#FF5733] text-white font-semibold rounded-md hover:bg-[#e64a2e] transition-colors"
              >Send Message</Button>
           </form>
         </div>

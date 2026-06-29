@@ -1,4 +1,6 @@
 "use client";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion"; 
 import {
   Carousel,
@@ -8,7 +10,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-
 const testimonials = [
   { id: 1, name: "Client Name", profession: "Profession", image: "/images/150.jpg" },
   { id: 2, name: "Client Name", profession: "Profession", image: "/images/150 (1).jpg" },
@@ -16,6 +17,11 @@ const testimonials = [
 ];
 
 export default function page() {
+ 
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 1500, stopOnInteraction: false })
+  );
+
   return (
    
     <motion.section 
@@ -39,6 +45,9 @@ export default function page() {
   
       <Carousel
         opts={{ align: "start", loop: true }}
+        plugins={[autoplayPlugin.current]}
+        onMouseEnter={() => autoplayPlugin.current.stop()}
+        onMouseLeave={() => autoplayPlugin.current.play()}
         className="w-full relative"
       >
         <CarouselContent className="-ml-4">

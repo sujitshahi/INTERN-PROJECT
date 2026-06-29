@@ -88,7 +88,7 @@ export default function page() {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                      <Button onPress={() => router.push("/classes")} className="p-5 md:p-7 px-8 md:px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-all">
+                      <Button onPress={() => router.push("/Classes")} className="p-5 md:p-7 px-8 md:px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-all">
                         Our Classes
                       </Button>
                     </motion.div>

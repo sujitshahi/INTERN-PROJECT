@@ -7,7 +7,7 @@ export default function FeatureCard() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.5 }
+      transition: { staggerChildren: 0.2 } 
     }
   };
 
@@ -27,8 +27,13 @@ export default function FeatureCard() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 text-center"
         >
 
-          {/* Card 1 */}
-          <motion.div variants={item} className="group flex flex-col items-center">
+
+          <motion.div 
+            variants={item} 
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }} 
+            className="group flex flex-col items-center cursor-pointer"
+          >
             <div className="w-24 h-24 rounded-full text-3xl bg-orange-50 group-hover:bg-orange-400 duration-300 flex items-center justify-center">
               <i className="fa-solid fa-bus text-orange-500 group-hover:text-white"></i>
             </div>
@@ -41,8 +46,14 @@ export default function FeatureCard() {
           </motion.div>
 
 
-          {/* Card 2 */}
-          <motion.div variants={item} className="group flex flex-col items-center">
+    
+
+          <motion.div 
+            variants={item} 
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="group flex flex-col items-center cursor-pointer"
+          >
             <div className="w-24 h-24 rounded-full text-3xl bg-green-50 group-hover:bg-green-400 duration-300 flex items-center justify-center">
               <i className="fa-solid fa-basketball text-green-500 group-hover:text-white"></i>
             </div>
@@ -55,8 +66,14 @@ export default function FeatureCard() {
           </motion.div>
 
 
-          {/* Card 3 */}
-          <motion.div variants={item} className="group flex flex-col items-center">
+       
+
+          <motion.div 
+            variants={item} 
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="group flex flex-col items-center cursor-pointer"
+          >
             <div className="w-24 h-24 rounded-full text-3xl bg-yellow-50 group-hover:bg-yellow-400 duration-300 flex items-center justify-center">
               <i className="fa-solid fa-house text-yellow-500 group-hover:text-white"></i>
             </div>
@@ -68,8 +85,14 @@ export default function FeatureCard() {
             </div>
           </motion.div>
 
-          {/* Card 4 */}
-          <motion.div variants={item} className="group flex flex-col items-center">
+        
+
+          <motion.div 
+            variants={item} 
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="group flex flex-col items-center cursor-pointer"
+          >
             <div className="w-24 h-24 rounded-full text-3xl bg-blue-50 group-hover:bg-blue-400 duration-300 flex items-center justify-center">
               <i className="fa-solid fa-chalkboard text-blue-500 group-hover:text-white"></i>
             </div>

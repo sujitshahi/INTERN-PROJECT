@@ -3,15 +3,13 @@ import { motion } from "framer-motion";
 
 export default function page() {
   return (
-
     <div className="min-h-screen py-20 px-4 mt-20 text-white">
     
-      
         <motion.div
           className="max-w-2xl mx-auto text-center mb-20"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1.8, ease: "easeOut" }} 
           viewport={{ once: true, amount: 0.2 }}
         >
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -26,16 +24,23 @@ export default function page() {
       
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 justify-items-center">
 
-            {/* Card 1 */}      
+       
             <motion.div
-              className="relative w-full max-w-[320px]"
+              className="relative w-full max-w-[320px] cursor-pointer"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              whileHover={{ y: -8, scale: 1.03 }} 
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 25,
+                layout: { duration: 0.5 },
+                default: { duration: 1.8, ease: "easeOut" }
+              }}
               viewport={{ once: true, amount: 0.3 }}
             >
-                <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="/images/team-1.jpg" alt="Teacher-1" className=" object-cover"/>                               
+                <div className="rounded-[100%] overflow-hidden bg-gray-100">
+                    <img src="/images/team-1.jpg" alt="Teacher-1" className="object-cover w-full h-full"/>                             
                 </div>
 
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
@@ -55,16 +60,24 @@ export default function page() {
                 </div>
             </motion.div>
 
-            {/* Card 2 */}
+
+           
             <motion.div
-              className="relative w-full max-w-[320px]"
+              className="relative w-full max-w-[320px] cursor-pointer"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 25,
+                layout: { duration: 0.5 },
+                default: { duration: 1.8, ease: "easeOut", delay: 0.2 } 
+              }}
               viewport={{ once: true, amount: 0.4 }}
             >
-                <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="/images/team-2.jpg" alt="Teacher-2" className=" object-cover" />
+                <div className="rounded-[100%] overflow-hidden bg-gray-100">
+                    <img src="/images/team-2.jpg" alt="Teacher-2" className="object-cover w-full h-full" />
                 </div>
                 
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
@@ -82,16 +95,24 @@ export default function page() {
                 </div>
             </motion.div>
 
-            {/* Card 3 */}
+       
+      
             <motion.div
-              className="relative w-full max-w-[320px]"
+              className="relative w-full max-w-[320px] cursor-pointer"
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 25,
+                layout: { duration: 0.5 },
+                default: { duration: 1.8, ease: "easeOut", delay: 0.4 } 
+              }}
               viewport={{ once: true, amount: 0.5 }}
             >
-                <div className=" rounded-[100%] overflow-hidden bg-gray-100">
-                    <img src="/images/team-3.jpg" alt="Teacher 3" className=" object-cover" />                    
+                <div className="rounded-[100%] overflow-hidden bg-gray-100">
+                    <img src="/images/team-3.jpg" alt="Teacher 3" className="object-cover w-full h-full" />                    
                 </div>
                
                 <div className="absolute -bottom-10 -right-4 w-56 h-56 rounded-full border-16 border-[#FFF8F6] bg-white flex flex-col items-center justify-center text-center shadow-sm hover:border-orange-500 duration-300">
