@@ -1,4 +1,4 @@
-import Extra from '../component/Extra'
+import Extra from '../Component/Extra'
 import Teacher from '../Teacher/page'
 import Popular_Teachers from '../Popular_Teacher/page'
 

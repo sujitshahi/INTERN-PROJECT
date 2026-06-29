@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Footer from "./component/Footer";
-import Header from "./component/Header/page";
-import ScrollToTop from "./component/ScrollToTop";
-import PageHeader from "./component/PageHeader";
+import Footer from "./Component/Footer";
+import Header from "./Component/Header/page";
+import ScrollToTop from "./Component/ScrollToTop";
+import PageHeader from "./Component/PageHeader";
 import { Suspense } from "react";
 
 const geistSans = Geist({
