@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function page() {
+export default function Popular_Teacher() {
   return (
     <div className="min-h-screen py-20 px-4 mt-20 text-white">
     

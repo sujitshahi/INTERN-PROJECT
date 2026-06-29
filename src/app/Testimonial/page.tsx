@@ -16,7 +16,7 @@ const testimonials = [
   { id: 3, name: "Client Name", profession: "Profession", image: "/images/150 (2).jpg" },
 ];
 
-export default function page() {
+export default function Testimonial() {
  
   const autoplayPlugin = React.useRef(
     Autoplay({ delay: 1500, stopOnInteraction: false })
