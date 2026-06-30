@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header() { 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -21,6 +21,7 @@ export default function Header() {
   return (
     <>
       <Navbar 
+      
         className="sticky h-20 z-50 shadow-md px-4 sm:px-6"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
