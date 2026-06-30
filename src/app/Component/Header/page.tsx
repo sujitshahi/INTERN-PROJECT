@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react"; 
+import { useState } from "react"; 
 import { 
   Dropdown, 
   DropdownTrigger, 
@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <>
       <Navbar 
-      
+
         className="sticky h-20 z-50 shadow-md px-4 sm:px-6"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
