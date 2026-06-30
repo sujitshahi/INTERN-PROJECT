@@ -56,7 +56,7 @@ export default function Header() {
             </DropdownMenu>
           </Dropdown>
           
-          <Link href="/Contact_Us" className="font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
+          <Link href="/contact_us" className="font-semibold hover:text-orange-500 hover:underline">Contact Us</Link>
         </NavbarContent>
 
         <NavbarContent justify="end" className="max-w-fit">
@@ -106,7 +106,7 @@ export default function Header() {
               </div>
             </div>
             <div className="border-b border-gray-100 py-4">
-              <Link href="/Contact_Us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+              <Link href="/contact_us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
             <div className="mt-8 pt-4">
               <button className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">

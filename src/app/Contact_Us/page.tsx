@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@heroui/react";
 import { motion } from "framer-motion";
 
-export default function Contact_Us() {
+export default function contact_us() {
 
   const [formData, setFormData] = useState({
     name: "",
