@@ -62,6 +62,7 @@ export default function Header() {
         <NavbarContent justify="end" className="max-w-fit">
           <div className="hidden sm:flex">
             <button
+              type="button"
               onClick={() => router.push('/')}
              className="bg-orange-500 text-white font-bold py-2 px-4 lg:px-6 rounded-full flex items-center gap-2 lg:gap-3 hover:bg-orange-600 transition-colors cursor-pointer text-sm lg:text-base">
               Join Us
@@ -97,11 +98,11 @@ export default function Header() {
               <div className="flex flex-col">
                 <div className="text-xl font-semibold py-3 text-gray-800">Pages</div>
                 <div className="pl-4 border-l-2 border-gray-200 ml-2">
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500" onClick={() => { router.push('/School_Facilities'); setIsMenuOpen(false); }}>School Facilities</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Popular_Teachers'); setIsMenuOpen(false); }}>Popular Teachers</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Teacher'); setIsMenuOpen(false); }}>Become A Teacher</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Appointment'); setIsMenuOpen(false); }}>Make Appointment</button>
-                  <button className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Testimonial'); setIsMenuOpen(false); }}>Testimonial</button>
+                  <button type="button" className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500" onClick={() => { router.push('/School_Facilities'); setIsMenuOpen(false); }}>School Facilities</button>
+                  <button type="button" className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Popular_Teachers'); setIsMenuOpen(false); }}>Popular Teachers</button>
+                  <button type="button" className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Teacher'); setIsMenuOpen(false); }}>Become A Teacher</button>
+                  <button type="button" className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Appointment'); setIsMenuOpen(false); }}>Make Appointment</button>
+                  <button type="button" className="w-full text-left py-3 cursor-pointer text-gray-700 hover:text-orange-500 text-lg" onClick={() => { router.push('/Testimonial'); setIsMenuOpen(false); }}>Testimonial</button>
                 </div>
               </div>
             </div>
@@ -109,7 +110,7 @@ export default function Header() {
               <Link href="/contact_us" className="font-semibold py-3 block text-gray-800 hover:text-orange-500" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </div>
             <div className="mt-8 pt-4">
-              <button className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">
+              <button type="button" className="w-full bg-orange-500 text-white font-bold py-4 px-4 rounded-full flex items-center justify-center gap-3 hover:bg-orange-600 transition-colors text-lg cursor-pointer">
                 Join Us <i className="fa-solid fa-arrow-right-long"></i>
               </button>
             </div>

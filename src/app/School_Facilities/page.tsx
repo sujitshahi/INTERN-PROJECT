@@ -1,13 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
-import FeatureCard from "./FeatureCard";
 
+import { m } from "framer-motion";
+import FeatureCard from "./FeatureCard";
 
 export default function School_Facilities() {
   return (
     <div className="mt-10 p-8 flex flex-col items-center justify-center text-white">
-     
-      <motion.h1 
+      <m.h1 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -15,9 +14,9 @@ export default function School_Facilities() {
         className="font-bold text-4xl"
       >
         School Facilities
-      </motion.h1>
+      </m.h1>
 
-      <motion.p 
+      <m.p 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -25,10 +24,9 @@ export default function School_Facilities() {
         className="text-2xl"
       >
         Explore our school's facilities and amenities.
-      </motion.p>
+      </m.p>
 
-    
       <FeatureCard />
     </div>
-  )
+  );
 }

@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@heroui/react";
+import Image from "next/image";
 
 import { useRouter } from "next/navigation";
 
@@ -29,16 +30,16 @@ export default function Footer() {
             </h3>
 
             <div className="mt-2 flex items-center gap-4">
-              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 duration-300 cursor-pointer hover:scale-105">
+              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer hover:scale-105">
                 <i className="fa-brands fa-twitter text-lg text-white hover:text-white"></i>
               </div>
-              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 duration-300 cursor-pointer hover:scale-105">
+              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer hover:scale-105">
                 <i className="fa-brands fa-facebook text-lg text-white hover:text-white"></i>
               </div>
-              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 duration-300 cursor-pointer hover:scale-105">
+              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer hover:scale-105">
                 <i className="fa-brands fa-youtube text-lg text-white hover:text-white"></i>
               </div>
-              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 duration-300 cursor-pointer hover:scale-105">
+              <div className="h-10 w-10 border-2 border-gray-400 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors duration-300 cursor-pointer hover:scale-105">
                 <i className="fa-brands fa-linkedin text-lg text-white hover:text-white"></i>
               </div>
             </div>
@@ -76,12 +77,12 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <h1 className="text-white text-2xl mb-4">Photo Gallery</h1>
             <div className="grid grid-cols-3 gap-2 max-w-50 md:max-w-none">
-              <img src="/images/classes-1.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 1" />
-              <img src="/images/classes-2.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 2" />
-              <img src="/images/classes-3.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 3" />
-              <img src="/images/classes-4.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 4" />
-              <img src="/images/classes-5.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 5" />
-              <img src="/images/classes-6.jpg" className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 6" />
+              <Image src="/images/classes-1.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 1" />
+              <Image src="/images/classes-2.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 2" />
+              <Image src="/images/classes-3.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 3" />
+              <Image src="/images/classes-4.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 4" />
+              <Image src="/images/classes-5.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 5" />
+              <Image src="/images/classes-6.jpg" width={68} height={68} className="h-17 w-17 rounded-xl object-cover border-2 border-white" alt="Gallery 6" />
             </div>
           </div>
 
@@ -94,9 +95,12 @@ export default function Footer() {
             </div>
             <div className="mt-7">
               <div className="flex flex-col sm:flex-row gap-3">
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Email address
+                </label>
                 <input 
+                  id="newsletter-email"
                   type="email" 
-                  placeholder="Enter your email" 
                   className="flex-1 p-2 border-2 border-gray-300 rounded-md text-gray-500 w-full"
                 />
                 <Button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 cursor-pointer transition-colors whitespace-nowrap w-full sm:w-auto">

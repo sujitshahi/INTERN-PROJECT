@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef, ReactNode } from "react";
-import { useInView } from "framer-motion";
+import Image from "next/image";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -14,18 +14,18 @@ function AnimatedSection({ children, delay = 0 }: AnimatedSectionProps) {
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{
         duration: 0.6,
         delay: delay,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1],
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -39,26 +39,25 @@ function AnimatedCard({ children, delay = 0 }: AnimatedCardProps) {
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, scale: 0.9, y: 30 }}
       animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 30 }}
       transition={{
         duration: 0.5,
         delay: delay,
-        ease: "easeOut"
+        ease: "easeOut",
       }}
       whileHover={{ scale: 1.02 }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
 export default function Classes() {
   return (
     <div className="min-h-screen p-10 text-white">
-      
       <AnimatedSection>
         <div className="max-w-2xl mx-auto text-center mt-25">
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
@@ -72,19 +71,22 @@ export default function Classes() {
       </AnimatedSection>
       
       <div className="pt-15 flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
-        {/* Card 1 */}
         <AnimatedCard delay={0.1}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-1.jpg" alt="Art" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-1.jpg"
+                  alt="Art" 
+                  width={300} height={300} 
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Art & Drawing</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image src="/images/123.avif" alt="John Doe" width={100} height={100} className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -101,19 +103,26 @@ export default function Classes() {
           </div>
         </AnimatedCard>
 
-        {/* Card 2 */}
         <AnimatedCard delay={0.2}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-2.jpg" alt="Color" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-2.jpg"
+                  alt="Color"
+                  width={300} height={300}
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Color Management</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image
+                    src="/images/123.avif"
+                    alt="John Doe"
+                    width={100} height={100} 
+                    className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -130,19 +139,26 @@ export default function Classes() {
           </div>
         </AnimatedCard>
 
-        {/* Card 3 */}
         <AnimatedCard delay={0.3}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-3.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-3.jpg"
+                  alt="athletic"
+                  width={300} height={300}
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Athletic & Dance</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image
+                    src="/images/123.avif"
+                    alt="John Doe"
+                    width={100} height={100}
+                    className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -159,19 +175,26 @@ export default function Classes() {
           </div>
         </AnimatedCard>
 
-        {/* Card 4 */}
         <AnimatedCard delay={0.4}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-4.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-4.jpg"
+                  alt="language"
+                  width={300} height={300}
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Language & Speaking</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image
+                    src="/images/123.avif"
+                    alt="John Doe"
+                    width={100} height={100}
+                    className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -188,19 +211,26 @@ export default function Classes() {
           </div>
         </AnimatedCard>
 
-        {/* Card 5 */}
         <AnimatedCard delay={0.5}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-5.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-5.jpg"
+                  alt="religion"
+                  width={300} height={300}
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">Religion & History</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image
+                    src="/images/123.avif"
+                    alt="John Doe"
+                    width={100} height={100}
+                    className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -217,19 +247,26 @@ export default function Classes() {
           </div>
         </AnimatedCard>
 
-        {/* Card 6 */}
         <AnimatedCard delay={0.6}>
-          <div className="relative pt-24 w-87.5 group transition-all duration-300 hover:-translate-y-4">
+          <div className="relative pt-24 w-87.5 group transition-colors duration-300 hover:-translate-y-4">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
               <div className="w-48 h-48 rounded-full border-10 border-white overflow-hidden shadow-sm">
-                <img src="/images/classes-6.jpg" alt="Dance" className="w-full h-full object-cover" />
+                <Image
+                  src="/images/classes-3.jpg"
+                  alt="general knowledge"
+                  width={300} height={300}
+                  className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="bg-[#FFF8F6] rounded-4xl pt-28 pb-8 px-8 shadow-sm">
               <h2 className="text-2xl font-bold text-[#1D4354] text-center mb-6">General Knowledge</h2>
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
-                  <img src="/images/123.avif" className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
+                  <Image
+                    src="/images/123.avif"
+                    alt="John Doe"
+                    width={100} height={100}
+                    className="w-10 h-10 rounded-3xl object-cover bg-gray-300" />
                   <div>
                     <p className="text-[#FF6B4A] font-bold text-sm">Jhon Doe</p>
                     <p className="text-gray-400 text-xs">Teacher</p>
@@ -247,5 +284,5 @@ export default function Classes() {
         </AnimatedCard>
       </div>
     </div>
-  )
+  );
 }

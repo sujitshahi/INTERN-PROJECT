@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function PageHeader({ title }: { title: string }) {
@@ -52,7 +53,7 @@ export default function PageHeader({ title }: { title: string }) {
         </h1>
 
         <nav className="flex items-center space-x-2 text-lg font-medium">
-          <a href="/" className="text-[#fe5d37]">Home</a>
+          <Link href="/" className="text-[#fe5d37]">Home</Link>
           <span className="text-white">/</span>
           <span className="text-[#fe5d37]">Pages</span>
           <span className="text-white">/</span>

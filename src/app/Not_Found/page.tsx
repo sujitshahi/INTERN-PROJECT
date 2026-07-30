@@ -2,15 +2,14 @@
 
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion"; 
+import { m } from "framer-motion";
 
 export default function Not_Found() {
   const router = useRouter();
 
   return (
     <div className="container-xxl py-5 flex flex-col items-center justify-center min-h-[60vh] text-center px-4 overflow-hidden">
-     
-      <motion.div 
+      <m.div 
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}   
         transition={{ duration: 0.8, ease: "easeOut" }} 
@@ -43,7 +42,7 @@ export default function Not_Found() {
             </Button>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

@@ -1,13 +1,15 @@
 "use client";
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
+
+import { m } from "framer-motion";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
 
@@ -15,12 +17,13 @@ export default function HomePage() {
   const router = useRouter(); 
   const slides = [
     {
+      id: "kindergarten-child",
       title: "The Best KinderGarden School For Your Child",
       description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "/images/photo.avif", 
     },
- 
     {
+      id: "brighter-future",
       title: "Make A Brighter Future For Your Child",
       description: "ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "/images/kid.jpg", 
@@ -31,14 +34,17 @@ export default function HomePage() {
     <Carousel className="w-full h-screen">
       <CarouselContent className="ml-0">
         {slides.map((slide, index) => (
-          <CarouselItem key={index} className="pl-0 w-screen h-screen">
+          <CarouselItem key={slide.id} className="pl-0 w-screen h-screen">
             <Card className="relative w-screen h-screen overflow-hidden border-none rounded-none">
               
               <div className="absolute inset-0 z-0">
-                <img 
+                <Image 
                   src={slide.image} 
                   alt={slide.title} 
-                  className="w-full h-full object-cover"
+                  fill
+                  priority={index === 0}
+                  sizes="100vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20" />
               </div>
@@ -50,30 +56,30 @@ export default function HomePage() {
               </div>
 
               <CardContent className="relative w-full h-full flex flex-col md:flex-row items-center justify-center p-4 md:p-6 z-30">
-               
+                
                 <div className="relative max-w-2xl p-4 md:p-8 md:mr-40 lg:mr-80">
       
-                  <motion.h1 
+                  <m.h1 
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg text-center md:text-left"
                   >
                     {slide.title}
-                  </motion.h1>
+                  </m.h1>
 
-                  <motion.p 
+                  <m.p 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
                     className="text-white text-xs sm:text-sm md:text-base lg:text-lg mb-8 drop-shadow-md text-center md:text-left"
                   >
                     {slide.description}
-                  </motion.p>
+                  </m.p>
                 
                   <div className="flex flex-wrap justify-center md:justify-start gap-4 overflow-hidden py-2">
-                   
-                    <motion.div
+                    
+                    <m.div
                       initial={{ x: -100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
@@ -81,17 +87,17 @@ export default function HomePage() {
                       <Button className="p-5 md:p-7 px-8 md:px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full">
                         Learn More
                       </Button>
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                       initial={{ x: 100, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                      <Button onPress={() => router.push("/Classes")} className="p-5 md:p-7 px-8 md:px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-all">
+                      <Button onPress={() => router.push("/Classes")} className="p-5 md:p-7 px-8 md:px-10 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-colors">
                         Our Classes
                       </Button>
-                    </motion.div>
+                    </m.div>
                   </div>
                 </div>
 
@@ -111,5 +117,5 @@ export default function HomePage() {
         ))}
       </CarouselContent>
     </Carousel>
-  )
+  );
 }
