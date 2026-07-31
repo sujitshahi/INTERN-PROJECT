@@ -133,6 +133,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const testimonials = [
   { id: 1, name: "Client Name", profession: "Profession", image: "/images/150.jpg" },
@@ -187,7 +188,9 @@ export default function Testimonial() {
                 <div className="bg-white mx-8 mb-8 p-4 flex items-center justify-between rounded-sm shadow-sm">
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-16 rounded-full overflow-hidden border-4 border-[#FFF5F3]">
-                      <img
+                      <Image
+                      width={100}
+                      height={100}
                         src={item.image}
                         alt={item.name}
                         className="object-cover w-full h-full"

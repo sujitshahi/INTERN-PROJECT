@@ -62,7 +62,7 @@ export default function Extra() {
           <div className="pt-4 flex flex-wrap items-center gap-6">
             <Button
               onPress={() => router.push("/")}
-              className="bg-[#FE5D37] text-white px-8 py-6 rounded-2xl font-black text-base shadow-lg shadow-orange-500/20 hover:bg-[#e44d2b] transition-all flex items-center gap-2 group"
+              className="bg-[#FE5D37] text-white px-8 py-6 rounded-2xl font-black text-base shadow-lg shadow-orange-500/20 hover:bg-[#e44d2b] transition-colors flex items-center gap-2 group"
             >
               Explore Programs
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -96,7 +96,7 @@ export default function Extra() {
 
           <motion.div
             whileHover={{ rotate: 0, scale: 1.05, zIndex: 30 }}
-            className="absolute top-0 right-2 sm:right-6 w-60 sm:w-68 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 -rotate-3 transition-all duration-300 z-10"
+            className="absolute top-0 right-2 sm:right-6 w-60 sm:w-68 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 -rotate-3 transition-colors duration-300 z-10"
           >
 
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-amber-200/60 backdrop-blur-xs rotate-2 shadow-xs border border-amber-300/40 z-20" />
@@ -117,7 +117,7 @@ export default function Extra() {
 
           <motion.div
             whileHover={{ rotate: 0, scale: 1.05, zIndex: 30 }}
-            className="absolute bottom-4 left-0 sm:left-4 w-56 sm:w-64 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 rotate-6 transition-all duration-300 z-20"
+            className="absolute bottom-4 left-0 sm:left-4 w-56 sm:w-64 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 rotate-6 transition-colors duration-300 z-20"
           >
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-pink-200/60 backdrop-blur-xs -rotate-3 shadow-xs border border-pink-300/40 z-20" />
             

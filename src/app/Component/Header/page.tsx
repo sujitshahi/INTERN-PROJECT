@@ -110,7 +110,7 @@ export default function HeaderSplit() {
             <button
               type="button"
               onClick={() => router.push('/Appointment')}
-              className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold py-2 px-5 rounded-full transition-all cursor-pointer text-sm"
+              className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold py-2 px-5 rounded-full transition-colors cursor-pointer text-sm"
             >
               Book a Tour
             </button>

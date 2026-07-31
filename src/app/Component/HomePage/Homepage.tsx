@@ -52,6 +52,7 @@ export default function HomePage() {
             <div className="flex gap-2 border-b border-slate-100 pb-2 mb-3 overflow-x-auto">
               {(Object.keys(pillars) as Array<keyof typeof pillars>).map((key) => (
                 <button
+                  type="button"
                   key={key}
                   onClick={() => setActiveTab(key)}
                   className={`text-xs font-bold px-3 py-1.5 rounded-lg capitalize transition-all cursor-pointer whitespace-nowrap ${

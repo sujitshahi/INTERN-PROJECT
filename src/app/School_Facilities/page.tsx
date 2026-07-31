@@ -22,7 +22,7 @@ export default function School_Facilities() {
             whileInView={{ opacity: 1, rotate: -2 }}
             viewport={{ once: true }}
             whileHover={{ rotate: 0, scale: 1.03 }}
-            className="bg-white p-5 rounded-4xl border-2 border-dashed border-orange-200 shadow-md flex flex-col gap-4 relative transition-all"
+            className="bg-white p-5 rounded-4xl border-2 border-dashed border-orange-200 shadow-md flex flex-col gap-4 relative transition-colors"
           >
             <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-slate-100">
               <Image
@@ -53,7 +53,7 @@ export default function School_Facilities() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ rotate: 0, scale: 1.03 }}
-            className="bg-white p-5 rounded-4xl border-2 border-dashed border-emerald-200 shadow-md flex flex-col gap-4 relative transition-all lg:mt-6"
+            className="bg-white p-5 rounded-4xl border-2 border-dashed border-emerald-200 shadow-md flex flex-col gap-4 relative transition-colors lg:mt-6"
           >
             <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-slate-100">
               <Image
@@ -84,7 +84,7 @@ export default function School_Facilities() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             whileHover={{ rotate: 0, scale: 1.03 }}
-            className="bg-white p-5 rounded-4xl border-2 border-dashed border-sky-200 shadow-md flex flex-col gap-4 relative transition-all"
+            className="bg-white p-5 rounded-4xl border-2 border-dashed border-sky-200 shadow-md flex flex-col gap-4 relative transition-colors"
           >
             <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-slate-100">
               <Image
@@ -115,7 +115,7 @@ export default function School_Facilities() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             whileHover={{ rotate: 0, scale: 1.03 }}
-            className="bg-white p-5 rounded-4xl border-2 border-dashed border-rose-200 shadow-md flex flex-col gap-4 relative transition-all lg:mt-6"
+            className="bg-white p-5 rounded-4xl border-2 border-dashed border-rose-200 shadow-md flex flex-col gap-4 relative transition-colors lg:mt-6"
           >
             <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-slate-100">
               <Image
