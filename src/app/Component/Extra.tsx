@@ -1,107 +1,152 @@
 "use client";
 
-import { Button } from "@heroui/react";
-import { m, useInView } from "framer-motion";
-import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { Music, Palette, Sparkles, HeartHandshake, ArrowRight } from "lucide-react";
 
 export default function Extra() {
   const router = useRouter();
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
 
-  const leftInView = useInView(leftRef, { once: true, margin: "-100px" });
-  const rightInView = useInView(rightRef, { once: true, margin: "-100px" });
+  const culturalPills = [
+    { icon: Palette, label: "Creative Arts", color: "bg-pink-100 text-pink-700 border-pink-200" },
+    { icon: Music, label: "Music & Movement", color: "bg-purple-100 text-purple-700 border-purple-200" },
+    { icon: Sparkles, label: "Annual Festivals", color: "bg-amber-100 text-amber-700 border-amber-200" },
+    { icon: HeartHandshake, label: "Community Care", color: "bg-emerald-100 text-emerald-700 border-emerald-200" },
+  ];
 
   return (
-    <div className="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12 min-h-screen text-white">
-      <m.div
-        ref={leftRef}
-        className="lg:w-1/2 space-y-6"
-        initial={{ opacity: 0, y: 80 }}
-        animate={leftInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-      >
-        <h1 className="text-3xl lg:text-5xl leading-tight tracking-tight">
-          Learn More About Our Work And Our Cultural Activities
-        </h1>
+    <section className="w-full bg-[#FAF8F5] text-slate-900 py-16 lg:py-24 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="lg:col-span-7 space-y-6"
+        >
 
-        <p className="text-lg leading-relaxed">
-          Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-          amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
-          clita duo justo magna dolore erat amet
-        </p>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300/60 text-amber-900 font-extrabold text-xs uppercase tracking-wider shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <span>Our Life & Culture</span>
+          </div>
 
-        <p className="text-lg leading-relaxed">
-          Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet
-          est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy
-          clita sit at.
-        </p>
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
+            Where Learning Meets <span className="text-[#FE5D37] underline decoration-wavy decoration-orange-300 underline-offset-8">Joy & Culture</span>
+          </h2>
 
-        <div className="flex flex-wrap items-center gap-8 pt-4">
-          <Button
-            onPress={() => router.push("/")}
-            className="bg-[#FE5D37] text-white px-10 py-7 rounded-full text-lg font-bold shadow-lg hover:bg-[#e44d2b] transition-colors"
+          <p className="text-base text-slate-600 leading-relaxed max-w-xl">
+            We believe education happens beyond worksheets. From vibrant cultural celebrations and music circles to outdoor art workshops, our daily rhythm keeps young minds curious, creative, and confident.
+          </p>
+
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 pt-2 max-w-lg">
+            {culturalPills.map((pill, idx) => {
+              const Icon = pill.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ scale: 1.03 }}
+                  className={`flex items-center gap-3 p-3 rounded-2xl border ${pill.color} shadow-sm transition-transform`}
+                >
+                  <div className="p-2 rounded-xl bg-white/80 shadow-xs">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <span className="font-extrabold text-xs sm:text-sm">{pill.label}</span>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <div className="pt-4 flex flex-wrap items-center gap-6">
+            <Button
+              onPress={() => router.push("/")}
+              className="bg-[#FE5D37] text-white px-8 py-6 rounded-2xl font-black text-base shadow-lg shadow-orange-500/20 hover:bg-[#e44d2b] transition-all flex items-center gap-2 group"
+            >
+              Explore Programs
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+
+            <div className="flex items-center gap-3 bg-white p-2.5 pr-5 rounded-2xl border border-slate-200/80 shadow-xs">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-slate-200">
+                <Image
+                  src="/images/123.avif"
+                  alt="John Doe"
+                  fill
+                  sizes="44px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-xs font-black text-slate-900">John Doe</p>
+                <p className="text-[11px] font-medium text-slate-500">School Director</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:col-span-5 relative min-h-115 sm:min-h-125 flex items-center justify-center"
+        >
+
+          <motion.div
+            whileHover={{ rotate: 0, scale: 1.05, zIndex: 30 }}
+            className="absolute top-0 right-2 sm:right-6 w-60 sm:w-68 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 -rotate-3 transition-all duration-300 z-10"
           >
-            Read More
-          </Button>
 
-          <div className="flex items-center gap-4">
-            <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-gray-100 relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-amber-200/60 backdrop-blur-xs rotate-2 shadow-xs border border-amber-300/40 z-20" />
+            
+            <div className="relative w-full h-44 rounded-lg overflow-hidden border border-slate-100">
               <Image
-                src="/images/123.avif"
-                alt="Jhon Doe"
+                src="/images/smile.avif"
+                alt="Cultural Activity"
                 fill
-                sizes="56px"
+                sizes="280px"
                 className="object-cover"
               />
             </div>
-            <div>
-              <p className="text-[#FE5D37] font-bold text-xl leading-none">Jhon Doe</p>
-              <p className="text-gray-500 text-sm">CEO & Founder</p>
+            <p className="text-center font-extrabold text-xs text-slate-700 mt-3 font-mono uppercase tracking-wider">
+              ✦ Music & Storytime
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ rotate: 0, scale: 1.05, zIndex: 30 }}
+            className="absolute bottom-4 left-0 sm:left-4 w-56 sm:w-64 bg-white p-3 pt-3 pb-8 rounded-xl shadow-xl border border-slate-200/60 rotate-6 transition-all duration-300 z-20"
+          >
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-pink-200/60 backdrop-blur-xs -rotate-3 shadow-xs border border-pink-300/40 z-20" />
+            
+            <div className="relative w-full h-40 rounded-lg overflow-hidden border border-slate-100">
+              <Image
+                src="/images/playing.avif"
+                alt="Outdoor Play"
+                fill
+                sizes="256px"
+                className="object-cover"
+              />
             </div>
-          </div>
-        </div>
-      </m.div>
+            <p className="text-center font-extrabold text-xs text-slate-700 mt-3 font-mono uppercase tracking-wider">
+              ✦ Outdoor Play Day
+            </p>
+          </motion.div>
 
-      <m.div
-        ref={rightRef}
-        className="relative w-full max-w-125 h-80 sm:h-105 md:h-130 flex items-center justify-center mx-auto"
-        initial={{ opacity: 0, y: 80 }}
-        animate={rightInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
-      >
-        <div className="absolute w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-10 hover:border-orange-500 transition-colors duration-300">
-          <Image
-            src="/images/smile.avif"
-            alt="Children reading"
-            fill
-            sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 320px"
-            className="object-cover"
-          />
-        </div>
-
-        <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 md:bottom-10 md:left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 transition-colors duration-300">
-          <Image
-            src="/images/playing.avif"
-            alt="Child playing"
-            fill
-            sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 224px"
-            className="object-cover"
-          />
-        </div>
-
-        <div className="absolute top-4 right-2 sm:top-16 sm:right-6 md:top-60 md:right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full border-8 md:border-12 border-[#FFF5F3] overflow-hidden z-20 hover:border-orange-500 transition-colors duration-300">
-          <Image
-            src="/images/color.avif"
-            alt="Child with camera"
-            fill
-            sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 224px"
-            className="object-cover"
-          />
-        </div>
-      </m.div>
-    </div>
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-0 right-4 sm:right-8 bg-amber-300 text-amber-950 p-4 rounded-2xl shadow-lg border border-amber-400 -rotate-6 z-30 max-w-42.5"
+          >
+            <p className="text-[11px] font-black leading-tight">
+              &quot;Learning through play, growing through culture.&quot;
+            </p>
+            <span className="text-[9px] font-bold opacity-75 mt-1 block">— Preschool Mindset</span>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
