@@ -282,7 +282,7 @@ export default function Extra() {
             
             <div className="relative w-full h-40 rounded-lg overflow-hidden border border-slate-100">
               <Image
-                src="https://images.unsplash.com/photo-1472162072142-d544e73eebfb?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1630139026564-4a2bf5670879?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8a2lkcyUyMHBsYXlpbmclMjBvdXRkb29yfGVufDB8fDB8fHww"
                 alt="Outdoor Play Day"
                 fill
                 sizes="256px"
