@@ -31,7 +31,6 @@ export default function HeaderSplit() {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-xs">
-      {/* Top Banner */}
       <div className="bg-linear-to-r from-orange-500 to-amber-500 text-white text-xs py-2 px-6 hidden md:flex justify-between items-center font-medium">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-2"><i className="fa-solid fa-phone"></i> +977 123456789</span>

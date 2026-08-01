@@ -21,7 +21,6 @@ export default function NotFound() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Direct user or handle search query
       router.push(`/?search=${encodeURIComponent(searchQuery)}`);
     }
   };
@@ -34,8 +33,6 @@ export default function NotFound() {
 
   return (
     <div className="min-h-[80vh] w-full flex items-center justify-center px-4 py-16 relative overflow-hidden font-sans bg-[#FFFDF9]">
-      
-      {/* Background Floating Decorative Blobs */}
       <motion.div 
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -47,10 +44,7 @@ export default function NotFound() {
         className="absolute bottom-16 right-8 sm:right-24 w-32 h-32 rounded-full bg-orange-200/50 blur-xl pointer-events-none"
       />
 
-      {/* Main 404 Container Card */}
       <div className="max-w-2xl w-full bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border border-slate-100 relative z-10 text-center flex flex-col items-center">
-        
-        {/* Top Playful Badge */}
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -61,7 +55,6 @@ export default function NotFound() {
           <span>Lost in the Playground?</span>
         </motion.div>
 
-        {/* Large Styled 404 Graphic */}
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -69,8 +62,6 @@ export default function NotFound() {
           className="flex items-center justify-center gap-2 sm:gap-4 my-2"
         >
           <span className="text-7xl sm:text-9xl font-black text-[#103741] tracking-tight">4</span>
-          
-          {/* Animated Spinning Compass "0" */}
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -82,7 +73,6 @@ export default function NotFound() {
           <span className="text-7xl sm:text-9xl font-black text-[#103741] tracking-tight">4</span>
         </motion.div>
 
-        {/* Text Area */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -97,7 +87,6 @@ export default function NotFound() {
           </p>
         </motion.div>
 
-        {/* Quick Search Form */}
         <motion.form 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -120,7 +109,6 @@ export default function NotFound() {
           </button>
         </motion.form>
 
-        {/* Action Buttons */}
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -136,7 +124,6 @@ export default function NotFound() {
           </Button>
         </motion.div>
 
-        {/* Quick Links Nav Pills */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -160,7 +147,6 @@ export default function NotFound() {
             })}
           </div>
         </motion.div>
-
       </div>
     </div>
   );

@@ -139,7 +139,6 @@ export default function School_Facilities() {
               Fresh Daily
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
