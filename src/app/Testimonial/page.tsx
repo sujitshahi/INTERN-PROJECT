@@ -20,7 +20,7 @@ interface TestimonialItem {
   quote: string;
   rating: number;
   image: string;
-}
+} 
 
 const testimonials: TestimonialItem[] = [
   {
