@@ -15,26 +15,34 @@ import {
   Youtube,
   Sparkles,
 } from "lucide-react";
+import { subscribeNewsletter } from "../actions/newsletter";
+
+const QUICK_LINKS = [
+  { name: "About Us", path: "/About_Us" },
+  { name: "Contact Us", path: "/Contact_Us" },
+  { name: "Our Services", path: "/" },
+  { name: "Privacy Policy", path: "#" },
+  { name: "Terms & Conditions", path: "#" },
+];
+
+const GALLERY_IMAGES = [
+  { id: "gallery-1", src: "/images/classes-1.jpg", alt: "Gallery preview 1" },
+  { id: "gallery-2", src: "/images/classes-2.jpg", alt: "Gallery preview 2" },
+  { id: "gallery-3", src: "/images/classes-3.jpg", alt: "Gallery preview 3" },
+  { id: "gallery-4", src: "/images/classes-4.jpg", alt: "Gallery preview 4" },
+  { id: "gallery-5", src: "/images/classes-5.jpg", alt: "Gallery preview 5" },
+  { id: "gallery-6", src: "/images/classes-6.jpg", alt: "Gallery preview 6" },
+];
+
+const SOCIAL_LINKS = [
+  { id: "twitter", icon: Twitter, href: "#" },
+  { id: "facebook", icon: Facebook, href: "#" },
+  { id: "youtube", icon: Youtube, href: "#" },
+  { id: "instagram", icon: Instagram, href: "#" },
+];
 
 export default function Footer() {
   const router = useRouter();
-
-  const quickLinks = [
-    { name: "About Us", path: "/About_Us" },
-    { name: "Contact Us", path: "/Contact_Us" },
-    { name: "Our Services", path: "/" },
-    { name: "Privacy Policy", path: "#" },
-    { name: "Terms & Conditions", path: "#" },
-  ];
-
-  const galleryImages = [
-    "/images/classes-1.jpg",
-    "/images/classes-2.jpg",
-    "/images/classes-3.jpg",
-    "/images/classes-4.jpg",
-    "/images/classes-5.jpg",
-    "/images/classes-6.jpg",
-  ];
 
   return (
     <footer className="w-full pt-12 pb-8 px-4 sm:px-8 lg:px-12 relative overflow-hidden font-sans">
@@ -53,16 +61,22 @@ export default function Footer() {
             </p>
           </div>
 
-          <form onSubmit={(e) => e.preventDefault()} className="w-full lg:w-auto flex-1 max-w-md">
+          <form action={subscribeNewsletter} className="w-full lg:w-auto flex-1 max-w-md">
             <div className="relative flex items-center">
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email Address
+              </label>
               <input
+                id="newsletter-email"
+                name="email"
                 type="email"
                 placeholder="Enter your email address..."
-                className="w-full pl-5 pr-32 py-3.5 rounded-full bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm outline-none focus:ring-4 focus:ring-orange-400/50 transition-all"
+                aria-label="Email Address"
+                className="w-full pl-5 pr-32 py-3.5 rounded-full bg-white text-slate-900 placeholder:text-slate-400 font-medium text-sm outline-none focus:ring-4 focus:ring-orange-400/50 transition-colors"
               />
               <button
                 type="submit"
-                className="absolute right-1.5 bg-[#FE5D37] hover:bg-[#e45230] text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-all cursor-pointer shadow-md hover:scale-105 active:scale-95"
+                className="absolute right-1.5 bg-[#FE5D37] hover:bg-[#e45230] text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-colors cursor-pointer shadow-md hover:scale-105 active:scale-95"
               >
                 <span>Join</span>
                 <Send className="w-4 h-4" />
@@ -93,18 +107,14 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2.5 pt-2">
-              {[
-                { icon: Twitter, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Youtube, href: "#" },
-                { icon: Instagram, href: "#" },
-              ].map((social, idx) => {
+              {SOCIAL_LINKS.map((social) => {
                 const Icon = social.icon;
                 return (
                   <a
-                    key={idx}
+                    aria-label={`Follow us on ${Icon.name}`}
+                    key={social.id}
                     href={social.href}
-                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#FE5D37] text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#FE5D37] text-white flex items-center justify-center transition-colors duration-300 hover:scale-110"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -119,16 +129,17 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-sm">
-              {quickLinks.map((link) => (
+              {QUICK_LINKS.map((link) => (
                 <li key={link.name}>
                   <button
+                    type="button"
                     onClick={() => link.path !== "#" && router.push(link.path)}
                     className="group flex items-center justify-between w-full text-slate-300 hover:text-white transition-colors py-1 cursor-pointer"
                   >
                     <span className="group-hover:translate-x-1.5 transition-transform duration-200">
                       {link.name}
                     </span>
-                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 text-[#FE5D37] transition-all" />
+                    <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 text-[#FE5D37] transition-colors" />
                   </button>
                 </li>
               ))}
@@ -141,14 +152,14 @@ export default function Footer() {
               Photo Gallery
             </h4>
             <div className="grid grid-cols-3 gap-2.5">
-              {galleryImages.map((src, i) => (
+              {GALLERY_IMAGES.map((image) => (
                 <div
-                  key={i}
+                  key={image.id}
                   className="relative aspect-square rounded-xl overflow-hidden group border border-white/10"
                 >
                   <Image
-                    src={src}
-                    alt={`Gallery preview ${i + 1}`}
+                    src={image.src}
+                    alt={image.alt}
                     fill
                     sizes="80px"
                     className="object-cover group-hover:scale-115 transition-transform duration-300"
@@ -172,7 +183,6 @@ export default function Footer() {
               <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
             </div>
           </div>
-
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
@@ -183,15 +193,20 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            <button onClick={() => router.push("/")} className="hover:text-white transition-colors cursor-pointer">
+            <button type="button" onClick={() => router.push("/")} className="hover:text-white transition-colors cursor-pointer">
               Home
             </button>
-            <button className="hover:text-white transition-colors cursor-pointer">Cookies</button>
-            <button className="hover:text-white transition-colors cursor-pointer">Help</button>
-            <button className="hover:text-white transition-colors cursor-pointer">FAQs</button>
+            <button type="button" className="hover:text-white transition-colors cursor-pointer">
+              Cookies
+            </button>
+            <button type="button" className="hover:text-white transition-colors cursor-pointer">
+              Help
+            </button>
+            <button type="button" className="hover:text-white transition-colors cursor-pointer">
+              FAQs
+            </button>
           </div>
         </div>
-
       </div>
     </footer>
   );

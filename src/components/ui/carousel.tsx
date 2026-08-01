@@ -4,8 +4,10 @@ import React, {
   useState,
   useCallback,
   useEffect,
+  useRef,
   createContext,
   useContext,
+  useMemo,
 } from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -67,10 +69,13 @@ function Carousel({
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(false)
 
-  const onSelect = useCallback((api: CarouselApi) => {
-    if (!api) return
-    setCanScrollPrev(api.canScrollPrev())
-    setCanScrollNext(api.canScrollNext())
+  // One-time initialization guard to prevent unnecessary parent re-renders
+  const initializedApiRef = useRef<CarouselApi | null>(null)
+
+  const onSelect = useCallback((emblaApi: CarouselApi) => {
+    if (!emblaApi) return
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
   }, [])
 
   const scrollPrev = useCallback(() => {
@@ -94,17 +99,16 @@ function Carousel({
     [scrollPrev, scrollNext]
   )
 
-  // react-doctor-disable-next-line react-doctor/no-prop-callback-in-effect
-  useEffect(() => {
-    if (!api || !setApi) return
-    setApi(api)
-  }, [api, setApi])
-
-  // react-doctor-disable-next-line react-doctor/effect-needs-cleanup
   useEffect(() => {
     if (!api) return
 
-    // react-doctor-disable-next-line react-hooks-js/set-state-in-effect
+    // Pass the API instance to setApi only once per unique API instance
+    if (setApi && initializedApiRef.current !== api) {
+      initializedApiRef.current = api
+      // eslint-disable-next-line react-doctor/no-pass-live-state-to-parent
+      setApi(api)
+    }
+
     onSelect(api)
 
     api.on("reInit", onSelect)
@@ -114,22 +118,36 @@ function Carousel({
       api.off("reInit", onSelect)
       api.off("select", onSelect)
     }
-  }, [api, onSelect])
+  }, [api, setApi, onSelect])
+
+  const resolvedOrientation =
+    orientation || (opts?.axis === "y" ? "vertical" : "horizontal")
+
+  const contextValue = useMemo(
+    () => ({
+      carouselRef,
+      api,
+      opts,
+      orientation: resolvedOrientation,
+      scrollPrev,
+      scrollNext,
+      canScrollPrev,
+      canScrollNext,
+    }),
+    [
+      carouselRef,
+      api,
+      opts,
+      resolvedOrientation,
+      scrollPrev,
+      scrollNext,
+      canScrollPrev,
+      canScrollNext,
+    ]
+  )
 
   return (
-    <CarouselContext.Provider
-      value={{
-        carouselRef,
-        api: api,
-        opts,
-        orientation:
-          orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
-        scrollPrev,
-        scrollNext,
-        canScrollPrev,
-        canScrollNext,
-      }}
-    >
+    <CarouselContext.Provider value={contextValue}>
       <div
         onKeyDownCapture={handleKeyDown}
         className={cn("relative", className)}

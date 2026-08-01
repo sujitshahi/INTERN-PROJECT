@@ -17,17 +17,17 @@ import {
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
+const PAGES_LINKS = [
+  { label: "School Facilities", path: "/School_Facilities" },
+  { label: "Popular Teachers", path: "/Popular_Teacher" },
+  { label: "Become A Teacher", path: "/Teacher" },
+  { label: "Make Appointment", path: "/Appointment" },
+  { label: "Testimonial", path: "/Testimonial" },
+];
+
 export default function HeaderSplit() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-
-  const pagesLinks = [
-    { label: "School Facilities", path: "/School_Facilities" },
-    { label: "Popular Teachers", path: "/Popular_Teacher" },
-    { label: "Become A Teacher", path: "/Teacher" },
-    { label: "Make Appointment", path: "/Appointment" },
-    { label: "Testimonial", path: "/Testimonial" },
-  ];
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-xs">
@@ -81,7 +81,7 @@ export default function HeaderSplit() {
                 </button>
               </DropdownTrigger>
               <DropdownMenu className="bg-white min-w-50 shadow-xl rounded-xl p-2 border border-gray-100">
-                {pagesLinks.map((item) => (
+                {PAGES_LINKS.map((item) => (
                   <DropdownItem
                     key={item.path}
                     onClick={() => router.push(item.path)}
@@ -140,7 +140,7 @@ export default function HeaderSplit() {
           <NavbarMenuItem className="flex flex-col gap-2 py-1">
             <span className="text-lg font-semibold text-gray-800">Pages</span>
             <div className="pl-4 border-l-2 border-orange-200 flex flex-col gap-2">
-              {pagesLinks.map((item) => (
+              {PAGES_LINKS.map((item) => (
                 <button
                   key={item.path}
                   type="button"
