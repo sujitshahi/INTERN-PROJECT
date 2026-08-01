@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function School_Facilities() {
   return (
-    <section className="w-full bg-[#FAF8F5] text-slate-900 py-16 lg:py-24 border-t border-slate-200/60 relative overflow-hidden">
+    <section className="w-full text-slate-900 py-16 lg:py-24 border-t border-slate-200/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="text-center max-w-xl mx-auto mb-16 space-y-3">
           <span className="px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-orange-700 font-extrabold text-xs tracking-wider uppercase inline-block">
