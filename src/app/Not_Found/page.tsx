@@ -1,48 +1,167 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@heroui/react";
 import { useRouter } from "next/navigation";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
+import { 
+  Compass, 
+  Home, 
+  Search, 
+  Sparkles, 
+  ArrowLeft, 
+  PhoneCall, 
+  Info 
+} from "lucide-react";
 
-export default function Not_Found() {
+export default function NotFound() {
   const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Direct user or handle search query
+      router.push(`/?search=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
+  const quickLinks = [
+    { label: "Home", path: "/", icon: Home },
+    { label: "About Us", path: "/About_Us", icon: Info },
+    { label: "Contact Us", path: "/Contact_Us", icon: PhoneCall },
+  ];
 
   return (
-    <div className="container-xxl py-5 flex flex-col items-center justify-center min-h-[60vh] text-center px-4 overflow-hidden">
-      <m.div 
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}   
-        transition={{ duration: 0.8, ease: "easeOut" }} 
-        className="container"
-      >
-        <div className="row justify-content-center">
-          <div className="col-lg-6">
-            <div className="flex justify-center mb-4">
-              <i className="fa-solid fa-triangle-exclamation text-[#FE5D37] text-7xl"></i>
-            </div>
+    <div className="min-h-[80vh] w-full flex items-center justify-center px-4 py-16 relative overflow-hidden font-sans bg-[#FFFDF9]">
+      
+      {/* Background Floating Decorative Blobs */}
+      <motion.div 
+        animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-12 left-8 sm:left-20 w-24 h-24 rounded-full bg-amber-200/50 blur-xl pointer-events-none"
+      />
+      <motion.div 
+        animate={{ y: [0, 18, 0], rotate: [0, -8, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute bottom-16 right-8 sm:right-24 w-32 h-32 rounded-full bg-orange-200/50 blur-xl pointer-events-none"
+      />
 
-            <h1 className="text-8xl font-bold text-[#103741] mb-2">
-              404
-            </h1>
+      {/* Main 404 Container Card */}
+      <div className="max-w-2xl w-full bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border border-slate-100 relative z-10 text-center flex flex-col items-center">
+        
+        {/* Top Playful Badge */}
+        <motion.div 
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300/60 text-amber-900 text-xs font-black uppercase tracking-wider mb-6"
+        >
+          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <span>Lost in the Playground?</span>
+        </motion.div>
 
-            <h1 className="text-4xl font-bold text-[#103741] mb-4">
-              Page Not Found
-            </h1>
+        {/* Large Styled 404 Graphic */}
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex items-center justify-center gap-2 sm:gap-4 my-2"
+        >
+          <span className="text-7xl sm:text-9xl font-black text-[#103741] tracking-tight">4</span>
+          
+          {/* Animated Spinning Compass "0" */}
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-[#FE5D37]/10 border-4 border-dashed border-[#FE5D37] flex items-center justify-center text-[#FE5D37]"
+          >
+            <Compass className="w-10 h-10 sm:w-14 sm:h-14" />
+          </motion.div>
+          
+          <span className="text-7xl sm:text-9xl font-black text-[#103741] tracking-tight">4</span>
+        </motion.div>
 
-            <p className="text-gray-600 mb-8 max-w-md mx-auto leading-relaxed">
-              We’re sorry, the page you have looked for does not exist in our website! 
-              Maybe go to our home page or try to use a search?
-            </p>
+        {/* Text Area */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="space-y-3 max-w-lg mx-auto"
+        >
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-[#103741]">
+            Oops! Page Got Lost
+          </h1>
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            The page you are looking for might have been moved, renamed, or took an unexpected field trip!
+          </p>
+        </motion.div>
 
-            <Button
-              onPress={() => router.push("/")}
-              className="mt-6 bg-[#FE5D37] text-white font-semibold py-7 px-9 rounded-full transition-transform hover:scale-105"
-            >
-              Go Back To Home
-            </Button>
+        {/* Quick Search Form */}
+        <motion.form 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          onSubmit={handleSearch}
+          className="w-full max-w-md mt-6 relative flex items-center"
+        >
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search for pages, programs..."
+            className="w-full pl-5 pr-12 py-3 rounded-2xl bg-slate-100 border border-slate-200 text-slate-800 text-sm font-medium outline-none focus:ring-2 focus:ring-[#FE5D37]/50 focus:bg-white transition-all"
+          />
+          <button
+            type="submit"
+            className="absolute right-2 p-2 rounded-xl bg-[#103741] text-white hover:bg-[#FE5D37] transition-colors cursor-pointer"
+          >
+            <Search className="w-4 h-4" />
+          </button>
+        </motion.form>
+
+        {/* Action Buttons */}
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-4 w-full"
+        >
+          <Button
+            onPress={() => router.push("/")}
+            className="bg-[#FE5D37] hover:bg-[#e45230] text-white font-extrabold px-8 py-6 rounded-2xl shadow-lg shadow-orange-500/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer text-base"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span>Take Me Home</span>
+          </Button>
+        </motion.div>
+
+        {/* Quick Links Nav Pills */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-8 pt-6 border-t border-slate-100 w-full flex flex-col items-center gap-3"
+        >
+          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Or visit one of these:</span>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {quickLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <button
+                  key={link.label}
+                  onClick={() => router.push(link.path)}
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-50 hover:bg-[#103741] text-slate-700 hover:text-white border border-slate-200 text-xs font-bold transition-all cursor-pointer"
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{link.label}</span>
+                </button>
+              );
+            })}
           </div>
-        </div>
-      </m.div>
+        </motion.div>
+
+      </div>
     </div>
   );
 }

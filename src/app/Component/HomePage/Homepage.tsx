@@ -31,7 +31,6 @@ export default function HomePage() {
   const activePillar = pillars[activeTab as keyof typeof pillars];
   return (
     <section className="relative w-full text-slate-900 flex items-center py-12 lg:py-16 overflow-hidden">
-      
       <div className="absolute top-12 left-10 w-24 h-24 rounded-full border-4 border-orange-200/60" />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         <div className="lg:col-span-6 flex flex-col items-start gap-6">

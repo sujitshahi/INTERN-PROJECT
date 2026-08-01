@@ -7,9 +7,6 @@ import Appointment from "./Appointment/page";
 import Popular_Teachers from "./Popular_Teacher/page";
 import Testimonial from "./Testimonial/page";
 
-
-
-
 export default function Page() {
   return (
     <div>

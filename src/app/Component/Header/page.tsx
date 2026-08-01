@@ -42,7 +42,6 @@ export default function HeaderSplit() {
         </div>
       </div>
 
-      {/* Main Navbar */}
       <Navbar
         className="bg-white h-20 px-4"
         isMenuOpen={isMenuOpen}
@@ -57,7 +56,6 @@ export default function HeaderSplit() {
           <span className="font-extrabold text-2xl text-gray-900 tracking-wide">Kider</span>
         </NavbarBrand>
 
-        {/* Center Nav */}
         <NavbarContent className="hidden sm:flex gap-8 justify-center text-gray-700">
           <NavbarItem>
             <Link href="/" className="font-semibold text-orange-500 hover:text-orange-600 transition-colors">
@@ -104,7 +102,6 @@ export default function HeaderSplit() {
           </NavbarItem>
         </NavbarContent>
 
-        {/* Right CTA */}
         <NavbarContent justify="end" className="max-w-fit">
           <NavbarItem className="hidden sm:flex">
             <button
@@ -124,7 +121,6 @@ export default function HeaderSplit() {
           </NavbarItem>
         </NavbarContent>
 
-        {/* Mobile Menu */}
         <NavbarMenu className="bg-white pt-6 px-6 gap-4">
           <NavbarMenuItem>
             <Link href="/" className="w-full text-lg font-semibold text-orange-500 block py-1" onClick={() => setIsMenuOpen(false)}>
