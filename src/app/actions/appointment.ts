@@ -10,9 +10,7 @@ export async function submitAppointment(formData: FormData) {
     childAge: formData.get("childAge"),
     message: formData.get("message"),
   };
-
-  // Run side effects (logging, DB writes, email sending, analytics) 
-  // after the response has been sent back to the user
+  
   after(() => {
     console.log("Appointment submitted:", data);
   });
