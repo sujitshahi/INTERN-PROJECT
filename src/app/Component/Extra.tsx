@@ -24,7 +24,7 @@ export default function Extra() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}    
             className="lg:col-span-7 space-y-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300/60 text-amber-900 font-extrabold text-xs uppercase tracking-wider shadow-xs">
