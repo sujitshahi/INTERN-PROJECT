@@ -17,7 +17,7 @@ export default function Extra() {
   const router = useRouter();
 
   return (
-    <LazyMotion features={domAnimation}>
+    <LazyMotion   features={domAnimation}>
       <section className="w-full text-slate-900 py-16 lg:py-24 relative overflow-hidden">
         <div className="max-w-7xl    mx-auto px-6 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <m.div
