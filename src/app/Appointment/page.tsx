@@ -17,7 +17,7 @@ export default function Appointment() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center space-y-4 mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-300/60 text-orange-900 font-extrabold text-xs uppercase tracking-wider shadow-xs">
+            <div className="inline-flex    items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-300/60 text-orange-900 font-extrabold text-xs uppercase tracking-wider shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#FE5D37]" />
               <span>Book A Visit</span>
             </div>
