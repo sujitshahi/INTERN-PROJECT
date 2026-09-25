@@ -102,7 +102,7 @@ const classesList: ClassItem[] = [
 export default function Classes() {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="w-full text-slate-900 py-16 lg:py-24 relative overflow-hidden">
+      <section className="w-full    text-slate-900 py-16 lg:py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <m.div
             initial={{ opacity: 0, y: 40 }}
